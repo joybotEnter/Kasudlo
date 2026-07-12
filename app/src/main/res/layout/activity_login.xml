@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- LOGIN CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rounded_card"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="24dp"
+            android:gravity="center_horizontal"
+            android:elevation="8dp">
+
+            <!-- CIRCULAR ICON LOGO -->
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/kasudlo"
+                android:scaleType="centerInside"
+                android:adjustViewBounds="true"
+                android:contentDescription="App Logo"/>
+
+            <!-- KASUDLO TEXT LOGO -->
+            <ImageView
+                android:id="@+id/ivLogoText"
+                android:layout_width="220dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/kasudlotext"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:contentDescription="Kasudlo"/>
+
+            <!-- MOTTO -->
+            <TextView
+                android:id="@+id/tvMotto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="10sp"
+                android:textStyle="italic"
+                android:fontFamily="@font/sansserif"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"/>
+
+            <!-- DIVIDER -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#1A000000"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- TAB ROW: Nurse / Patient -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal"
+                android:background="@drawable/tab_container_bg"
+                android:padding="4dp">
+
+                <Button
+                    android:id="@+id/btnTabNurse"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="🩺 Nurse"
+                    android:fontFamily="@font/sansserif"
+                    android:textColor="@color/mottoBlue"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/tab_active_bg"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+                <Button
+                    android:id="@+id/btnTabPatient"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="🧑 Patient"
+                    android:fontFamily="@font/sansserif"
+                    android:textColor="@color/textDark"
+                    android:textSize="13sp"
+                    android:background="@android:color/transparent"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+            </LinearLayout>
+
+            <!-- NURSE FIELDS -->
+            <LinearLayout
+                android:id="@+id/layoutNurse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Student Number"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/sansserif"
+                    android:textColor="@color/mottoBlue"
+                    android:layout_marginBottom="4dp"/>
+
+                <EditText
+                    android:id="@+id/etStudentNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/rounded_edittext"
+                    android:hint="e.g. 202100001"
+                    android:inputType="text"
+                    android:padding="14dp"
+                    android:fontFamily="@font/sansserif"
+                    android:textColor="@color/textDark"
+                    android:textColorHint="#8A8A8A"/>
+
+            </LinearLayout>
+
+            <!-- PATIENT FIELDS -->
+            <LinearLayout
+                android:id="@+id/layoutPatient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email Address"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/sansserif"
+                    android:textColor="@color/mottoGreen"
+                    android:layout_marginBottom="4dp"/>
+
+                <EditText
+                    android:id="@+id/etPatientEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/rounded_edittext"
+                    android:hint="your@email.com"
+                    android:inputType="textEmailAddress"
+                    android:padding="14dp"
+                    android:fontFamily="@font/sansserif"
+                    android:textColor="@color/textDark"
+                    android:textColorHint="#8A8A8A"/>
+
+            </LinearLayout>
+
+            <!-- PASSWORD LABEL -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/sansserif"
+                android:textColor="@color/mottoBlue"
+                android:layout_marginBottom="4dp"/>
+
+            <!-- PASSWORD FIELD -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:endIconMode="password_toggle"
+                app:boxBackgroundMode="filled"
+                app:boxCornerRadiusTopStart="18dp"
+                app:boxCornerRadiusTopEnd="18dp"
+                app:boxCornerRadiusBottomStart="18dp"
+                app:boxCornerRadiusBottomEnd="18dp"
+                app:boxBackgroundColor="@android:color/transparent"
+                app:endIconTint="@color/mottoBlue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/rounded_edittext"
+                    android:fontFamily="@font/sansserif"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:padding="14dp"
+                    android:textColor="@color/textDark"
+                    android:textColorHint="#8A8A8A"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- LOGIN BUTTON — blue matching logo -->
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:fontFamily="@font/sansserif"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/mottoBlue"
+                android:text="Log In as Nurse"/>
+
+            <!-- REGISTER LINK -->
+            <LinearLayout
+                android:id="@+id/layoutRegisterLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="14dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No account? "
+                    android:fontFamily="@font/sansserif"
+                    android:textSize="13sp"
+                    android:textColor="@color/textDark"/>
+
+                <TextView
+                    android:id="@+id/tvRegister"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Register here"
+                    android:fontFamily="@font/sansserif"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/mottoGreen"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

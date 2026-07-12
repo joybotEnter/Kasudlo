@@ -1,0 +1,18 @@
+<resources>
+
+    <color name="pastelBlue">#B8D8FF</color>
+    <color name="pastelPink">#FFD6E7</color>
+    <color name="pastelYellow">#FFF0A8</color>
+    <color name="pastelGreen">#D8F5C0</color>
+    <color name="cream">#FFFDF7</color>
+    <color name="textDark">#2C2C2C</color>
+    <color name="textMid">#757575</color>
+    <color name="textLight">#BDBDBD</color>
+    <color name="gray">#9E9E9E</color>
+    <color name="darkGray">#454343</color>
+    <color name="mottoGreen">#2e7d32</color>
+    <color name="mottoBlue">#1a4fa8</color>
+    <color name="mottoOrange">#e65100</color>
+    <color name="mottoRed">#c62828</color>
+
+</resources>

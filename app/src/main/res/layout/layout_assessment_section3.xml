@@ -1,0 +1,1224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="4dp">
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- SECTION HEADER -->
+    <!-- ══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/rounded_card"
+        android:elevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="#1a7a4a">
+
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="🏠"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Environmental: Home"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Housing, water, sanitation and waste"
+                    android:textSize="11sp"
+                    android:textColor="#CCEEDD"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- HOUSING -->
+    <!-- ══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/rounded_card"
+        android:elevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="#1a4fa8">
+
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="🏗️"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Housing"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Ownership, construction and condition"
+                    android:textSize="11sp"
+                    android:textColor="#CCE0FF"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView android:text="Ownership"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgHomeOwnership"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp">
+                <RadioButton android:id="@+id/rbOwned" android:text="Owned"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbRented" android:text="Rented"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbRentFree" android:text="Rent Free"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbSquatting" android:text="Squatting"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+            </RadioGroup>
+
+            <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                android:background="#E5E5E5" android:layout_marginBottom="14dp"/>
+
+            <TextView android:text="Type of Construction"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgConstruction"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp">
+                <RadioButton android:id="@+id/rbLight" android:text="Light"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbMixed" android:text="Mixed"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbConcrete" android:text="Concrete"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+            </RadioGroup>
+
+            <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                android:background="#E5E5E5" android:layout_marginBottom="14dp"/>
+
+            <TextView android:text="Number of Rooms used for sleeping"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgNumRooms"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp">
+                <RadioButton android:id="@+id/rbRooms1" android:text="1 Room"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbRooms2" android:text="2 Rooms"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbRooms3" android:text="3 Rooms"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbRooms4" android:text="4 Rooms"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbRooms5Plus" android:text="5 or more Rooms"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+            </RadioGroup>
+
+            <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                android:background="#E5E5E5" android:layout_marginBottom="14dp"/>
+
+            <TextView android:text="Housing Congestion"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgHousingCongestion"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp">
+                <RadioButton android:id="@+id/rbCongestionYes" android:text="Yes"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbCongestionNo" android:text="No"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+            </RadioGroup>
+
+            <!-- Housing Congestion – Observation -->
+            <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                android:background="#E5E5E5" android:layout_marginBottom="14dp"/>
+
+            <TextView android:text="Housing Congestion (Observation)"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgHousingCongestionObservation"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp">
+                <RadioButton android:id="@+id/rbCongestionObsYes" android:text="Yes"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbCongestionObsNo" android:text="No"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+            </RadioGroup>
+
+            <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                android:background="#E5E5E5" android:layout_marginBottom="14dp"/>
+
+            <TextView android:text="Space Adequacy"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgSpaceAdequacy"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp">
+                <RadioButton android:id="@+id/rbSpaceAdequate" android:text="Adequate"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbSpaceInadequate" android:text="Inadequate"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+            </RadioGroup>
+
+            <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                android:background="#E5E5E5" android:layout_marginBottom="14dp"/>
+
+            <TextView android:text="Lighting Facility"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgLightingFacility"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp">
+                <RadioButton android:id="@+id/rbLightingElectricity" android:text="Electricity"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbLightingKerosene" android:text="Kerosene Lamp"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbLightingCandle" android:text="Candle"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbLightingSolar" android:text="Solar"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbLightingOthers" android:text="Others"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+            </RadioGroup>
+
+            <TextView android:text="Lighting Adequacy"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgLightingAdequacy"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp">
+                <RadioButton android:id="@+id/rbLightingAdequate" android:text="Adequate"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbLightingInadequate" android:text="Inadequate"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+            </RadioGroup>
+
+            <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                android:background="#E5E5E5" android:layout_marginBottom="14dp"/>
+
+            <TextView android:text="Ventilation"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgVentilation"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp">
+                <RadioButton android:id="@+id/rbVentilationAdequate" android:text="Adequate"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbVentilationInadequate" android:text="Inadequate"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+            </RadioGroup>
+
+            <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                android:background="#E5E5E5" android:layout_marginBottom="14dp"/>
+
+            <TextView android:text="Overall Sanitation"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgSanitation"
+                android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <RadioButton android:id="@+id/rbClean" android:text="Clean"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbDirty" android:text="Dirty"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+            </RadioGroup>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- WATER SUPPLY -->
+    <!-- ══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/rounded_card"
+        android:elevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="#534ab7">
+
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="💧"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Water Supply"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Ownership, source and potability"
+                    android:textSize="11sp"
+                    android:textColor="#D8D4FF"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView android:text="Ownership"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgWaterOwnership"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp">
+                <RadioButton android:id="@+id/rbWaterPrivate" android:text="Private"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbWaterPublic" android:text="Public"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+            </RadioGroup>
+
+            <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                android:background="#E5E5E5" android:layout_marginBottom="14dp"/>
+
+            <TextView android:text="Water Source"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgWaterSource"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp">
+                <RadioButton android:id="@+id/rbWaterDeepWell" android:text="Deep Well"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbWaterLocalDistrict" android:text="Local Water District"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbWaterCommercial" android:text="Commercial"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+            </RadioGroup>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- FOOD STORAGE / COOKING -->
+    <!-- ══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/rounded_card"
+        android:elevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="#b85c00">
+
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="🍳"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Food Storage / Cooking"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:text="Storage method and cooking practices"
+                android:textSize="11sp"
+                android:textColor="#FFD9A0"
+                android:fontFamily="@font/sansserif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView android:text="Food Storage"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgFoodStorage2"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp">
+                <RadioButton android:id="@+id/rbFoodStorageCovered" android:text="Covered"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbFoodStorageUncovered" android:text="Uncovered"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+            </RadioGroup>
+
+            <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                android:background="#E5E5E5" android:layout_marginBottom="14dp"/>
+
+            <TextView android:text="Food Storage Method"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView
+                android:text="Select all that apply"
+                android:textSize="11sp"
+                android:textColor="@color/textLight"
+                android:fontFamily="@font/sansserif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbStorageRefrigerator" android:text="Refrigerator"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbStorageCabinet" android:text="Cabinet"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbStorageBasket" android:text="Basket"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbStorageTable" android:text="Table"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+            <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                android:background="#E5E5E5" android:layout_marginVertical="14dp"/>
+
+            <TextView android:text="Cooking Method"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView
+                android:text="Select all that apply"
+                android:textSize="11sp"
+                android:textColor="@color/textLight"
+                android:fontFamily="@font/sansserif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbCookElectricStove" android:text="Electric Stove"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbCookGasStove" android:text="Gas Stove"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbCookFirewood" android:text="Firewood"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbCookOthers" android:text="Others"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etCookOthers"
+                android:hint="Specify other cooking method"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginTop="8dp" android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                android:background="#E5E5E5" android:layout_marginBottom="14dp"/>
+
+            <TextView android:text="Kitchen Sanitation"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgKitchenSanitation2"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp">
+                <RadioButton android:id="@+id/rbKitchenClean" android:text="Generally Clean"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbKitchenDirty" android:text="Dirty"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+            </RadioGroup>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- WASTE DISPOSAL -->
+    <!-- ══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/rounded_card"
+        android:elevation="3dp">
+
+        <!-- Section header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="#0f6e56">
+
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="🗑️"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView android:text="Waste Disposal"
+                    android:textSize="13sp" android:textStyle="bold"
+                    android:fontFamily="@font/sansserif" android:textColor="#FFFFFF"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Garbage storage and disposal method"
+                    android:textSize="11sp"
+                    android:textColor="#CCEEDD"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Body -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView android:text="Garbage Disposal"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgGarbageDisposal"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp">
+                <RadioButton android:id="@+id/rbGarbageBurning" android:text="Burning"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbGarbageBurying" android:text="Burying"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbGarbageComposting" android:text="Composting"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbGarbageCollected" android:text="Collected by Garbage Truck"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbGarbageOthers" android:text="Others"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+            </RadioGroup>
+
+            <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                android:background="#E5E5E5" android:layout_marginBottom="14dp"/>
+
+            <TextView android:text="Garbage Storage"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgGarbageStorage"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp">
+                <RadioButton android:id="@+id/rbGarbageStoragePracticed" android:text="Practiced"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbGarbageStorageNotPracticed" android:text="Not Practiced"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+            </RadioGroup>
+
+            <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                android:background="#E5E5E5" android:layout_marginBottom="14dp"/>
+
+            <TextView android:text="Waste Segregation"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgWasteSegregation"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp">
+                <RadioButton android:id="@+id/rbSegregationPracticed" android:text="Practiced"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbSegregationNotPracticed" android:text="Not Practiced"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+            </RadioGroup>
+
+            <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                android:background="#E5E5E5" android:layout_marginBottom="14dp"/>
+
+            <TextView android:text="Disposal Method"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView
+                android:text="Select all that apply"
+                android:textSize="11sp"
+                android:textColor="@color/textLight"                android:fontFamily="@font/sansserif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbHogFeeding" android:text="Hog Feeding"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbOpenDumping" android:text="Open Dumping"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbBurialInPit" android:text="Burial in Pit"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbCollected" android:text="Collected by Garbage Truck"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbComposting" android:text="Composting"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbOpenBurning" android:text="Open Burning"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- TOILET FACILITIES -->
+    <!-- ══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/rounded_card"
+        android:elevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="#1a4fa8">
+
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="🚽"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Toilet Facilities"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Ownership and type of toilet"
+                    android:textSize="11sp"
+                    android:textColor="#CCE0FF"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView android:text="Ownership"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgToiletOwnership"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp">
+                <RadioButton android:id="@+id/rbToiletOwned" android:text="Owned"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbToiletShared" android:text="Shared"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbToiletNone" android:text="None"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+            </RadioGroup>
+
+            <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                android:background="#E5E5E5" android:layout_marginBottom="14dp"/>
+
+            <TextView android:text="Type of Toilet"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgToiletType"
+                android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <RadioButton android:id="@+id/rbBallotSystem" android:text="Ballot System"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbPailSystem" android:text="Pail System"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbOverhungLatrine" android:text="Overhung Latrine"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbWaterSealed" android:text="Water Sealed"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbFlushType" android:text="Flush Type"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+            </RadioGroup>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- DRAINAGE -->
+    <!-- ══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/rounded_card"
+        android:elevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="#534ab7">
+
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="🌊"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Drainage"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="System and condition"
+                    android:textSize="11sp"
+                    android:textColor="#D8D4FF"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView android:text="Drainage System"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgDrainageSystem"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp">
+                <RadioButton android:id="@+id/rbDrainageClosed" android:text="Closed/Underground"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbDrainageOpen" android:text="Open Canal"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbDrainageNone" android:text="None"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+            </RadioGroup>
+
+            <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                android:background="#E5E5E5" android:layout_marginBottom="14dp"/>
+
+            <TextView android:text="Drainage Condition"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgDrainageCondition"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp">
+                <RadioButton android:id="@+id/rbDrainageFlowing" android:text="Free Flowing"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbDrainageStagnant" android:text="Stagnant"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbDrainageClogged" android:text="Clogged"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+            </RadioGroup>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- ANIMALS / RABIES -->
+    <!-- ══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/rounded_card"
+        android:elevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="#b71c1c">
+
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="🐾"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Animals / Rabies"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Household animals and vaccination"
+                    android:textSize="11sp"
+                    android:textColor="#FFCCCC"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView android:text="Animals in Household"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgRabiesAnimals"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"/>
+
+            <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                android:background="#E5E5E5" android:layout_marginBottom="14dp"/>
+
+            <TextView android:text="Animal 1 – Kind"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etAnimal1Kind"
+                android:hint="e.g. Dog, Cat"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <TextView android:text="Animal 1 – Number"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etAnimal1Number"
+                android:hint="e.g. 2"
+                android:inputType="number"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <TextView android:text="Animal 1 – Kept Where"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etAnimal1KeptWhere"
+                android:hint="e.g. Inside/Outside"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <TextView android:text="Animal 1 – Vaccination Status"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgAnimal1Vaccination"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp">
+                <RadioButton android:id="@+id/rbAnimal1VaccinatedYes" android:text="Vaccinated"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbAnimal1VaccinatedNo" android:text="Not Vaccinated"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbAnimal1VaccinatedUnknown" android:text="Unknown"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+            </RadioGroup>
+
+            <!-- Presence of Rabies Carriers – Animal 1 -->
+            <TextView android:text="Presence of Animals that are Rabies Carriers"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgAnimal1RabiesCarrier"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp">
+                <RadioButton android:id="@+id/rbAnimal1RabiesYes" android:text="Yes"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbAnimal1RabiesNo" android:text="No"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+            </RadioGroup>
+
+            <!-- ─── ANIMAL 2 ─── -->
+            <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                android:background="#E5E5E5" android:layout_marginBottom="14dp"/>
+
+            <TextView android:text="Animal 2 – Type / Kind"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etAnimal2Kind"
+                android:hint="e.g. Cat, Dog, Pig"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <TextView android:text="Animal 2 – Number of Heads"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etAnimal2Heads"
+                android:hint="e.g. 3"
+                android:inputType="number"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <TextView android:text="Animal 2 – Vaccination Status"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgAnimal2Vaccination"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp">
+                <RadioButton android:id="@+id/rbAnimal2VaccinatedYes" android:text="Vaccinated"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbAnimal2VaccinatedNo" android:text="Not Vaccinated"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbAnimal2VaccinatedUnknown" android:text="Unknown"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+            </RadioGroup>
+
+            <TextView android:text="Presence of Animals that are Rabies Carriers"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgAnimal2RabiesCarrier"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp">
+                <RadioButton android:id="@+id/rbAnimal2RabiesYes" android:text="Yes"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbAnimal2RabiesNo" android:text="No"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+            </RadioGroup>
+
+            <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                android:background="#E5E5E5" android:layout_marginBottom="14dp"/>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

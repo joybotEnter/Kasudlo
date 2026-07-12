@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="24dp"
+        android:paddingTop="50dp">
+
+        <!-- Profile bubble -->
+        <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:background="@drawable/pastel_blue_card"
+            android:gravity="center"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="👤"
+                android:textSize="38sp" />
+        </LinearLayout>
+
+        <!-- Resident Name -->
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resident Name"
+            android:fontFamily="@font/sansserif"
+            android:textColor="@color/textDark"
+            android:textStyle="bold"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Community Health Profile"
+            android:fontFamily="@font/sansserif"
+            android:textColor="@color/textMid"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="30dp" />
+
+        <!-- Age -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/rounded_edittext"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="18dp">
+
+            <TextView
+                android:id="@+id/tvAge"
+                android:fontFamily="@font/sansserif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Age: --"
+                android:textColor="@color/textDark"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <!-- Gender -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:fontFamily="@font/sansserif"
+            android:layout_height="56dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/rounded_edittext"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="18dp">
+
+            <TextView
+                android:id="@+id/tvGender"
+                android:fontFamily="@font/sansserif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gender: --"
+                android:textColor="@color/textDark"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <!-- Barangay -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/rounded_edittext"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="18dp">
+
+            <TextView
+                android:id="@+id/tvBarangay"
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/sansserif"
+                android:layout_height="wrap_content"
+                android:text="Barangay: --"
+                android:textColor="@color/textDark"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <!-- Health Status Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:background="@drawable/rounded_edittext"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Health Status"
+                android:fontFamily="@font/sansserif"
+                android:textColor="@color/textDark"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvHealthFlags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="No health flags"
+                android:fontFamily="@font/sansserif"
+
+                android:textColor="@color/textMid"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <!-- Back Button -->
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="30dp"
+
+            android:fontFamily="@font/sansserif"
+
+            android:background="@drawable/rounded_button"
+            android:text="Back"
+            android:textColor="@color/textDark"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</ScrollView>

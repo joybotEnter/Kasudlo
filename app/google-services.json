@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "275561179969",
+    "project_id": "kasudlo-bulsu",
+    "storage_bucket": "kasudlo-bulsu.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:275561179969:android:eab29af397beb89f928fc0",
+        "android_client_info": {
+          "package_name": "com.example.kasudlo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDe1vgqg7bLUGdgfpwb4L2Limta6JCQSfo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

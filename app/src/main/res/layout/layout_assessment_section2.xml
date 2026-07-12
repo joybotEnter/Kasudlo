@@ -1,0 +1,892 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="4dp">
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- SECTION HEADER -->
+    <!-- ══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/rounded_card"
+        android:elevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="#1a7a4a">
+
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="🏘️"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="II. Socio-Economic, Cultural &amp; Environmental"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Community services and economic data"
+                    android:textSize="11sp"
+                    android:textColor="#CCEEDD"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- SERVICES IN THE COMMUNITY -->
+    <!-- ══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/rounded_card"
+        android:elevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="#0f6e56">
+
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="🏥"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Services in the Community"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Select all that apply"
+                    android:textSize="11sp"
+                    android:textColor="#CCEEDD"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <CheckBox android:id="@+id/cbReligiousServices" android:text="Religious Services"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbLivelihoodServices" android:text="Livelihood Services"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbHealthServices" android:text="Health Services"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbGarbageCollection" android:text="Garbage Collection"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbPeaceAndOrder" android:text="Peace and Order"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbCommOthers" android:text="Others"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+            <TextView android:text="Specify other services"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginTop="8dp" android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etCommOthers"
+                android:hint="e.g. Livelihood assistance"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- INSTITUTIONAL FACILITIES -->
+    <!-- ══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/rounded_card"
+        android:elevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="#534ab7">
+
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="🏛️"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Institutional Facilities"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Select all that apply"
+                    android:textSize="11sp"
+                    android:textColor="#D8D4FF"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <CheckBox android:id="@+id/cbBrgyHall" android:text="Barangay Hall"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbHealthStation" android:text="Health Station"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbChurch" android:text="Church"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbSchool" android:text="School"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbSeniorCitizen" android:text="Senior Citizen Center"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbYouth" android:text="Youth Center"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbOrganizationsOthers" android:text="Others"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+            <TextView android:text="Specify other facilities"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginTop="8dp" android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etOrganizationsOthers"
+                android:hint="e.g. Day care center"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- TRADITIONS / CUSTOMS -->
+    <!-- ══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/rounded_card"
+        android:elevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="#1a4fa8">
+
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="🎊"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Tradition / Customs"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Select all that apply"
+                    android:textSize="11sp"
+                    android:textColor="#CCE0FF"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <CheckBox android:id="@+id/cbBayanihan" android:text="Bayanihan"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbPalabraDeHonor" android:text="Palabra de Honor"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbPakikisama" android:text="Pakikisama"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbNingasKugon" android:text="Ningas Kugon"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbFiestas" android:text="Fiestas"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbCloseFamilyTies" android:text="Close Family Ties"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbRespectForElderly" android:text="Respect for Elderly"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbTraditionOthers" android:text="Others"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+            <TextView android:text="Specify other traditions"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginTop="8dp" android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etTraditionOthers"
+                android:hint="e.g. Pamamanhikan"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- RECREATIONAL FACILITIES -->
+    <!-- ══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/rounded_card"
+        android:elevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="#b85c00">
+
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="⛹️"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Recreational Facilities"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Select all that apply"
+                    android:textSize="11sp"
+                    android:textColor="#FFD9A0"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <CheckBox android:id="@+id/cbRecreationCourt" android:text="Court"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbPlayground" android:text="Playground"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbPlaza" android:text="Plaza"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbRecreationOthers" android:text="Others"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+            <TextView android:text="Specify other recreational facilities"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginTop="8dp" android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etRecreationOthers"
+                android:hint="e.g. Swimming pool"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- TRANSPORTATION & COMMUNICATION -->
+    <!-- ══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/rounded_card"
+        android:elevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="#1a4fa8">
+
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="🚌"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Mode of Transportation"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Select all that apply"
+                    android:textSize="11sp"
+                    android:textColor="#CCE0FF"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <CheckBox android:id="@+id/cbTricycle" android:text="Tricycle"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbJeep" android:text="Jeepney"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbPujPuv" android:text="Public Utility Jeepney/Public Utility Vehicle"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbBicycle" android:text="Bicycle"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbPrivateVehicle" android:text="Private Vehicle"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- MODE OF COMMUNICATION -->
+    <!-- ══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/rounded_card"
+        android:elevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="#0f6e56">
+
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="📡"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Mode of Communication"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Select all that apply"
+                    android:textSize="11sp"
+                    android:textColor="#CCEEDD"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <CheckBox android:id="@+id/cbPostalSystem" android:text="Postal System"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbInternet" android:text="Internet"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbTelephone" android:text="Telephone"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbCellPhone" android:text="Cell Phone"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbTwoWayRadio" android:text="Two-Way Radio"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- ECONOMIC INDICATOR -->
+    <!-- ══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/rounded_card"
+        android:elevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="#b71c1c">
+
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="💰"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Economic Indicator"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Select all that apply"
+                    android:textSize="11sp"
+                    android:textColor="@color/textLight"                android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Earner 1 -->
+            <TextView android:text="Earner 1"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etEarner1Position"
+                android:hint="Position / Occupation"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="8dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+            <EditText android:id="@+id/etEarner1Income"
+                android:hint="Monthly Income"
+                android:inputType="numberDecimal"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                android:background="#E5E5E5" android:layout_marginBottom="14dp"/>
+
+            <!-- Earner 2 -->
+            <TextView android:text="Earner 2"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etEarner2Position"
+                android:hint="Position / Occupation"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="8dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+            <EditText android:id="@+id/etEarner2Income"
+                android:hint="Monthly Income"
+                android:inputType="numberDecimal"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                android:background="#E5E5E5" android:layout_marginBottom="14dp"/>
+
+            <!-- Earner 3 -->
+            <TextView android:text="Earner 3"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etEarner3Position"
+                android:hint="Position / Occupation"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="8dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+            <EditText android:id="@+id/etEarner3Income"
+                android:hint="Monthly Income"
+                android:inputType="numberDecimal"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                android:background="#E5E5E5" android:layout_marginBottom="14dp"/>
+
+            <!-- Earner 4 -->
+            <TextView android:text="Earner 4"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etEarner4Position"
+                android:hint="Position / Occupation"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="8dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+            <EditText android:id="@+id/etEarner4Income"
+                android:hint="Monthly Income"
+                android:inputType="numberDecimal"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                android:background="#E5E5E5" android:layout_marginVertical="14dp"/>
+
+            <TextView android:text="Monthly Income Bracket"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <Spinner android:id="@+id/spinnerMonthlyIncome"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                android:background="#E5E5E5" android:layout_marginBottom="14dp"/>
+
+            <TextView android:text="Source of Income"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbFinanceEmployment" android:text="Employment"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbFinanceBusiness" android:text="Business"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbFinancePension" android:text="Pension"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbFinanceRelatives" android:text="Support from Relatives"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbFinanceOthers" android:text="Others"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+            <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                android:background="#E5E5E5" android:layout_marginVertical="14dp"/>
+
+            <TextView android:text="Income Adequacy"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgIncomeAdequacy"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp">
+                <RadioButton android:id="@+id/rbIncomeAdequate" android:text="Income Adequate"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbIncomeNotAdequate" android:text="Income Not Adequate"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+            </RadioGroup>
+
+            <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                android:background="#E5E5E5" android:layout_marginBottom="14dp"/>
+
+            <TextView android:text="Health Budget Allocation"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgHealthBudget"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"/>
+            <EditText android:id="@+id/etHealthBudgetAmount"
+                android:hint="Health Budget Amount (₱)"
+                android:inputType="numberDecimal"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

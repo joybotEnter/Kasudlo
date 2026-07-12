@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/cream">
+
+    <!-- CIRCULAR LOGO -->
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:src="@drawable/kasudlo"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"
+        android:visibility="invisible"
+        android:contentDescription="App Logo"/>
+
+    <!-- KASUDLO TEXT LOGO -->
+    <ImageView
+        android:id="@+id/ivLogoText"
+        android:layout_width="260dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/kasudlotext"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:visibility="invisible"
+        android:contentDescription="Kasudlo"/>
+
+    <!-- MOTTO -->
+    <TextView
+        android:id="@+id/tvMotto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="11sp"
+        android:textStyle="italic"
+        android:fontFamily="@font/sansserif"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:visibility="invisible"/>
+
+    <!-- START BUTTON -->
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="200dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="48dp"
+        android:text="Get Started"
+        android:textSize="15sp"
+        android:backgroundTint="@color/mottoBlue"
+        android:fontFamily="@font/sansserif"
+        android:textColor="@color/textLight"
+        android:visibility="invisible"/>
+
+</LinearLayout>

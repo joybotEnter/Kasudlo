@@ -1,0 +1,2148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="4dp">
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- SECTION HEADER: Survey Header -->
+    <!-- ══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/rounded_card"
+        android:elevation="3dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="#1a4fa8">
+
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="📋"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Survey Header"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Basic survey information"
+                    android:textSize="11sp"
+                    android:textColor="#CCE0FF"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Control No -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:fontFamily="@font/sansserif"
+                android:text="Control No."
+                android:textColor="@color/textMid"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etControlNo"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/rounded_edittext"
+                android:clickable="true"
+                android:cursorVisible="true"
+                android:enabled="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:fontFamily="@font/sansserif"
+                android:hint="e.g. 2024-001"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="yes"
+                android:inputType="text"
+                android:longClickable="true"
+                android:paddingHorizontal="20dp"
+                android:textColor="@color/textDark"
+                android:textColorHint="@color/textLight"
+                android:textIsSelectable="false"
+                android:textSize="15sp" />
+
+            <!-- Number of Family Members -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:fontFamily="@font/sansserif"
+                android:text="Number of Family Members"
+                android:textColor="@color/textMid"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etNumberOfFamily"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:hint="e.g. 5"
+                android:inputType="number"
+                android:padding="14dp"
+                android:textSize="15sp" />
+
+            <!-- Address -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:fontFamily="@font/sansserif"
+                android:text="Address"
+                android:textColor="@color/textMid"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etAddress"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:hint="Barangay, Municipality, Province"
+                android:padding="14dp"
+                android:textSize="15sp" />
+
+            <!-- Informant -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:fontFamily="@font/sansserif"
+                android:text="Informant"
+                android:textColor="@color/textMid"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etInformant"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:hint="Full name of informant"
+                android:padding="14dp"
+                android:textSize="15sp" />
+
+            <!-- Surveyed By -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:fontFamily="@font/sansserif"
+                android:text="Surveyed By"
+                android:textColor="@color/textMid"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etSurveyedBy"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:hint="Name of nurse/surveyor"
+                android:padding="14dp"
+                android:textSize="15sp" />
+
+            <!-- Relation to Head of Family -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="14dp"
+                android:background="#E5E5E5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:fontFamily="@font/sansserif"
+                android:text="Relation to Head of Family"
+                android:textColor="@color/textMid"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rgRelationToHead2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp">
+
+                <RadioButton
+                    android:id="@+id/rbRelationHead2"
+                    android:fontFamily="@font/sansserif"
+                    android:text="Head"
+                    android:textColor="@color/textDark"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbRelationSpouse2"
+                    android:fontFamily="@font/sansserif"
+                    android:text="Spouse"
+                    android:textColor="@color/textDark"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbRelationChild2"
+                    android:fontFamily="@font/sansserif"
+                    android:text="Child"
+                    android:textColor="@color/textDark"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbRelationParent2"
+                    android:fontFamily="@font/sansserif"
+                    android:text="Parent"
+                    android:textColor="@color/textDark"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbRelationSibling2"
+                    android:fontFamily="@font/sansserif"
+                    android:text="Sibling"
+                    android:textColor="@color/textDark"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbRelationOther2"
+                    android:fontFamily="@font/sansserif"
+                    android:text="Other"
+                    android:textColor="@color/textDark"
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+            <!-- Gender -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="14dp"
+                android:background="#E5E5E5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:fontFamily="@font/sansserif"
+                android:text="Gender"
+                android:textColor="@color/textMid"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rgGender2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp">
+
+                <RadioButton
+                    android:id="@+id/rbGenderMale2"
+                    android:fontFamily="@font/sansserif"
+                    android:text="Male"
+                    android:textColor="@color/textDark"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbGenderFemale2"
+                    android:fontFamily="@font/sansserif"
+                    android:text="Female"
+                    android:textColor="@color/textDark"
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+            <!-- Marital Status -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="14dp"
+                android:background="#E5E5E5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:fontFamily="@font/sansserif"
+                android:text="Marital Status"
+                android:textColor="@color/textMid"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rgMaritalStatus2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp">
+
+                <RadioButton
+                    android:id="@+id/rbMaritalSingle2"
+                    android:fontFamily="@font/sansserif"
+                    android:text="Single"
+                    android:textColor="@color/textDark"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMaritalMarried2"
+                    android:fontFamily="@font/sansserif"
+                    android:text="Married"
+                    android:textColor="@color/textDark"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMaritalWidowed2"
+                    android:fontFamily="@font/sansserif"
+                    android:text="Widowed"
+                    android:textColor="@color/textDark"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMaritalSeparated2"
+                    android:fontFamily="@font/sansserif"
+                    android:text="Separated"
+                    android:textColor="@color/textDark"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbMaritalCohabiting2"
+                    android:fontFamily="@font/sansserif"
+                    android:text="Cohabiting"
+                    android:textColor="@color/textDark"
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+            <!-- Educational Attainment -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="14dp"
+                android:background="#E5E5E5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:fontFamily="@font/sansserif"
+                android:text="Educational Attainment"
+                android:textColor="@color/textMid"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rgEducationalAttainment2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp">
+
+                <RadioButton
+                    android:id="@+id/rbEduNone2"
+                    android:fontFamily="@font/sansserif"
+                    android:text="No Formal Education"
+                    android:textColor="@color/textDark"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbEduElementary2"
+                    android:fontFamily="@font/sansserif"
+                    android:text="Elementary"
+                    android:textColor="@color/textDark"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbEduHighSchool2"
+                    android:fontFamily="@font/sansserif"
+                    android:text="High School"
+                    android:textColor="@color/textDark"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbEduSeniorHighSchool2"
+                    android:fontFamily="@font/sansserif"
+                    android:text="Senior High School"
+                    android:textColor="@color/textDark"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbEduVocational2"
+                    android:fontFamily="@font/sansserif"
+                    android:text="Vocational / Technical"
+                    android:textColor="@color/textDark"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbEduCollege"
+                    android:fontFamily="@font/sansserif"
+                    android:text="College Graduate"
+                    android:textColor="@color/textDark"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rbEduPostGrad2"
+                    android:fontFamily="@font/sansserif"
+                    android:text="Post Graduate"
+                    android:textColor="@color/textDark"
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- SECTION: Visit Dates -->
+    <!-- ══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/rounded_card"
+        android:elevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="#1a7a4a">
+
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="📅"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Visit Dates"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Record each visit schedule"
+                    android:textSize="11sp"
+                    android:textColor="#CCEEDD"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- 1st Visit -->
+            <TextView android:text="1st Visit"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/rounded_edittext"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="14dp" android:paddingEnd="14dp"
+                android:layout_marginBottom="14dp">
+                <EditText android:id="@+id/etDateFirstVisit"
+                    android:hint="Tap to pick date"
+                    android:focusable="false" android:clickable="true"
+                    android:background="@null"
+                    android:fontFamily="@font/sansserif" android:textSize="15sp"
+                    android:layout_width="0dp" android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <TextView android:text="📅" android:textSize="20sp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- 2nd Visit -->
+            <TextView android:text="2nd Visit"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/rounded_edittext"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="14dp" android:paddingEnd="14dp"
+                android:layout_marginBottom="14dp">
+                <EditText android:id="@+id/etDateSecondVisit"
+                    android:hint="Tap to pick date"
+                    android:focusable="false" android:clickable="true"
+                    android:background="@null"
+                    android:fontFamily="@font/sansserif" android:textSize="15sp"
+                    android:layout_width="0dp" android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <TextView android:text="📅" android:textSize="20sp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- 3rd Visit -->
+            <TextView android:text="3rd Visit"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/rounded_edittext"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="14dp" android:paddingEnd="14dp">
+                <EditText android:id="@+id/etDateThirdVisit"
+                    android:hint="Tap to pick date"
+                    android:focusable="false" android:clickable="true"
+                    android:background="@null"
+                    android:fontFamily="@font/sansserif" android:textSize="15sp"
+                    android:layout_width="0dp" android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <TextView android:text="📅" android:textSize="20sp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- SECTION: Time & Status -->
+    <!-- ══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/rounded_card"
+        android:elevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="#b85c00">
+
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="⏰"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Time &amp; Status"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Visit duration and outcome"
+                    android:textSize="11sp"
+                    android:textColor="#FFD9A0"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Time Started / Finished -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="14dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="8dp">
+                    <TextView android:text="⏰  Time Started"
+                        android:textSize="13sp" android:textStyle="bold"
+                        android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                        android:layout_marginBottom="6dp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:background="@drawable/rounded_edittext"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingStart="14dp" android:paddingEnd="10dp">
+                        <EditText android:id="@+id/etTimeStarted"
+                            android:hint="00:00"
+                            android:focusable="false" android:clickable="true"
+                            android:background="@null"
+                            android:fontFamily="@font/sansserif" android:textSize="15sp"
+                            android:layout_width="0dp" android:layout_height="match_parent"
+                            android:layout_weight="1"/>
+                        <TextView android:text="🕐" android:textSize="18sp"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView android:text="⏰  Time Finished"
+                        android:textSize="13sp" android:textStyle="bold"
+                        android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                        android:layout_marginBottom="6dp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:background="@drawable/rounded_edittext"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingStart="14dp" android:paddingEnd="10dp">
+                        <EditText android:id="@+id/etTimeFinished"
+                            android:hint="00:00"
+                            android:focusable="false" android:clickable="true"
+                            android:background="@null"
+                            android:fontFamily="@font/sansserif" android:textSize="15sp"
+                            android:layout_width="0dp" android:layout_height="match_parent"
+                            android:layout_weight="1"/>
+                        <TextView android:text="🕐" android:textSize="18sp"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Status of Last Visit -->
+            <TextView android:text="Status of Last Visit"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etStatusLastVisit"
+                android:hint="e.g. Completed, Follow-up needed"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- SECTION: I. Demographic Variable -->
+    <!-- ══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/rounded_card"
+        android:elevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="#1a4fa8">
+
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="👨‍👩‍👧‍👦"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="I. Demographic Variable"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Household member information"
+                    android:textSize="11sp"
+                    android:textColor="#CCE0FF"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Full Name -->
+            <TextView android:text="Full Name"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember1Name"
+                android:hint="e.g. Juan Dela Cruz"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Relation to Head -->
+            <TextView android:text="Relation to Head of Family"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember1Relation"
+                android:hint="e.g. Head, Spouse, Child"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Gender + Age -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="14dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:layout_marginEnd="8dp">
+                    <TextView android:text="Gender"
+                        android:textSize="13sp" android:textStyle="bold"
+                        android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                        android:layout_marginBottom="6dp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <EditText android:id="@+id/etMember1Gender"
+                        android:hint="Male / Female"
+                        android:background="@drawable/rounded_edittext"
+                        android:fontFamily="@font/sansserif"
+                        android:padding="14dp" android:textSize="15sp"
+                        android:layout_width="match_parent" android:layout_height="56dp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:text="Age"
+                        android:textSize="13sp" android:textStyle="bold"
+                        android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                        android:layout_marginBottom="6dp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <EditText android:id="@+id/etMember1Age"
+                        android:hint="e.g. 32"
+                        android:inputType="number"
+                        android:background="@drawable/rounded_edittext"
+                        android:fontFamily="@font/sansserif"
+                        android:padding="14dp" android:textSize="15sp"
+                        android:layout_width="match_parent" android:layout_height="56dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Birthdate -->
+            <TextView android:text="Birthdate"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/rounded_edittext"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="14dp" android:paddingEnd="14dp"
+                android:layout_marginBottom="14dp">
+                <EditText android:id="@+id/etMember1Birthdate"
+                    android:hint="Tap to pick birthdate"
+                    android:focusable="false" android:clickable="true"
+                    android:background="@null"
+                    android:fontFamily="@font/sansserif" android:textSize="15sp"
+                    android:layout_width="0dp" android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <TextView android:text="📅" android:textSize="20sp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- Marital Status -->
+            <TextView android:text="Marital Status"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember1MaritalStatus"
+                android:hint="e.g. Single, Married, Widowed"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Religion -->
+            <TextView android:text="Religion"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember1Religion"
+                android:hint="e.g. Roman Catholic"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Educational Attainment -->
+            <TextView android:text="Educational Attainment"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember1Education"
+                android:hint="e.g. College Graduate"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Occupation Type -->
+            <TextView android:text="Occupation Type"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember1OccupationType"
+                android:hint="e.g. Farmer, Nurse, Driver"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Place of Work -->
+            <TextView android:text="Place of Work"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember1PlaceOfWork"
+                android:hint="e.g. Barangay Health Center"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Length of Residence -->
+            <TextView android:text="Length of Residence"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember1LengthOfResidence"
+                android:hint="e.g. 10 years"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Dialect -->
+            <TextView android:text="Dialect / Language Spoken"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etDialect"
+                android:hint="e.g. Tagalog, Bisaya"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- FAMILY MEMBER #2 -->
+    <!-- ══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/rounded_card"
+        android:elevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="#1565C0">
+
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="👤"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Family Member #2"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Household member information"
+                    android:textSize="11sp"
+                    android:textColor="#CCE0FF"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Full Name -->
+            <TextView android:text="Full Name"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember2Name"
+                android:hint="e.g. Juan Dela Cruz"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Relation to Head -->
+            <TextView android:text="Relation to Head of Family"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember2Relation"
+                android:hint="e.g. Head, Spouse, Child"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Gender + Age -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="14dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:layout_marginEnd="8dp">
+                    <TextView android:text="Gender"
+                        android:textSize="13sp" android:textStyle="bold"
+                        android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                        android:layout_marginBottom="6dp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <EditText android:id="@+id/etMember2Gender"
+                        android:hint="Male / Female"
+                        android:background="@drawable/rounded_edittext"
+                        android:fontFamily="@font/sansserif"
+                        android:padding="14dp" android:textSize="15sp"
+                        android:layout_width="match_parent" android:layout_height="56dp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:text="Age"
+                        android:textSize="13sp" android:textStyle="bold"
+                        android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                        android:layout_marginBottom="6dp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <EditText android:id="@+id/etMember2Age"
+                        android:hint="e.g. 32"
+                        android:inputType="number"
+                        android:background="@drawable/rounded_edittext"
+                        android:fontFamily="@font/sansserif"
+                        android:padding="14dp" android:textSize="15sp"
+                        android:layout_width="match_parent" android:layout_height="56dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Birthdate -->
+            <TextView android:text="Birthdate"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/rounded_edittext"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="14dp" android:paddingEnd="14dp"
+                android:layout_marginBottom="14dp">
+                <EditText android:id="@+id/etMember2Birthdate"
+                    android:hint="Tap to pick birthdate"
+                    android:focusable="false" android:clickable="true"
+                    android:background="@null"
+                    android:fontFamily="@font/sansserif" android:textSize="15sp"
+                    android:layout_width="0dp" android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <TextView android:text="📅" android:textSize="20sp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- Marital Status -->
+            <TextView android:text="Marital Status"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember2MaritalStatus"
+                android:hint="e.g. Single, Married, Widowed"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Religion -->
+            <TextView android:text="Religion"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember2Religion"
+                android:hint="e.g. Roman Catholic"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Educational Attainment -->
+            <TextView android:text="Educational Attainment"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember2Education"
+                android:hint="e.g. College Graduate"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Occupation Type -->
+            <TextView android:text="Occupation Type"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember2OccupationType"
+                android:hint="e.g. Farmer, Nurse, Driver"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Place of Work -->
+            <TextView android:text="Place of Work"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember2PlaceOfWork"
+                android:hint="e.g. Barangay Health Center"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Length of Residence -->
+            <TextView android:text="Length of Residence"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember2LengthOfResidence"
+                android:hint="e.g. 10 years"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Dialect / Language Spoken -->
+            <TextView android:text="Dialect / Language Spoken"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember2Dialect"
+                android:hint="e.g. Tagalog, Bisaya"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- FAMILY MEMBER #3 -->
+    <!-- ══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/rounded_card"
+        android:elevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="#2E7D32">
+
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="👤"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Family Member #3"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Household member information"
+                    android:textSize="11sp"
+                    android:textColor="#C8E6C9"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Full Name -->
+            <TextView android:text="Full Name"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember3Name"
+                android:hint="e.g. Juan Dela Cruz"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Relation to Head -->
+            <TextView android:text="Relation to Head of Family"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember3Relation"
+                android:hint="e.g. Head, Spouse, Child"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Gender + Age -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="14dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:layout_marginEnd="8dp">
+                    <TextView android:text="Gender"
+                        android:textSize="13sp" android:textStyle="bold"
+                        android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                        android:layout_marginBottom="6dp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <EditText android:id="@+id/etMember3Gender"
+                        android:hint="Male / Female"
+                        android:background="@drawable/rounded_edittext"
+                        android:fontFamily="@font/sansserif"
+                        android:padding="14dp" android:textSize="15sp"
+                        android:layout_width="match_parent" android:layout_height="56dp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:text="Age"
+                        android:textSize="13sp" android:textStyle="bold"
+                        android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                        android:layout_marginBottom="6dp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <EditText android:id="@+id/etMember3Age"
+                        android:hint="e.g. 32"
+                        android:inputType="number"
+                        android:background="@drawable/rounded_edittext"
+                        android:fontFamily="@font/sansserif"
+                        android:padding="14dp" android:textSize="15sp"
+                        android:layout_width="match_parent" android:layout_height="56dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Birthdate -->
+            <TextView android:text="Birthdate"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/rounded_edittext"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="14dp" android:paddingEnd="14dp"
+                android:layout_marginBottom="14dp">
+                <EditText android:id="@+id/etMember3Birthdate"
+                    android:hint="Tap to pick birthdate"
+                    android:focusable="false" android:clickable="true"
+                    android:background="@null"
+                    android:fontFamily="@font/sansserif" android:textSize="15sp"
+                    android:layout_width="0dp" android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <TextView android:text="📅" android:textSize="20sp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- Marital Status -->
+            <TextView android:text="Marital Status"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember3MaritalStatus"
+                android:hint="e.g. Single, Married, Widowed"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Religion -->
+            <TextView android:text="Religion"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember3Religion"
+                android:hint="e.g. Roman Catholic"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Educational Attainment -->
+            <TextView android:text="Educational Attainment"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember3Education"
+                android:hint="e.g. College Graduate"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Occupation Type -->
+            <TextView android:text="Occupation Type"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember3OccupationType"
+                android:hint="e.g. Farmer, Nurse, Driver"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Place of Work -->
+            <TextView android:text="Place of Work"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember3PlaceOfWork"
+                android:hint="e.g. Barangay Health Center"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Length of Residence -->
+            <TextView android:text="Length of Residence"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember3LengthOfResidence"
+                android:hint="e.g. 10 years"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Dialect / Language Spoken -->
+            <TextView android:text="Dialect / Language Spoken"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember3Dialect"
+                android:hint="e.g. Tagalog, Bisaya"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- FAMILY MEMBER #4 -->
+    <!-- ══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/rounded_card"
+        android:elevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="#6A1B9A">
+
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="👤"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Family Member #4"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Household member information"
+                    android:textSize="11sp"
+                    android:textColor="#E1BEE7"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Full Name -->
+            <TextView android:text="Full Name"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember4Name"
+                android:hint="e.g. Juan Dela Cruz"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Relation to Head -->
+            <TextView android:text="Relation to Head of Family"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember4Relation"
+                android:hint="e.g. Head, Spouse, Child"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Gender + Age -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="14dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:layout_marginEnd="8dp">
+                    <TextView android:text="Gender"
+                        android:textSize="13sp" android:textStyle="bold"
+                        android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                        android:layout_marginBottom="6dp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <EditText android:id="@+id/etMember4Gender"
+                        android:hint="Male / Female"
+                        android:background="@drawable/rounded_edittext"
+                        android:fontFamily="@font/sansserif"
+                        android:padding="14dp" android:textSize="15sp"
+                        android:layout_width="match_parent" android:layout_height="56dp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:text="Age"
+                        android:textSize="13sp" android:textStyle="bold"
+                        android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                        android:layout_marginBottom="6dp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <EditText android:id="@+id/etMember4Age"
+                        android:hint="e.g. 32"
+                        android:inputType="number"
+                        android:background="@drawable/rounded_edittext"
+                        android:fontFamily="@font/sansserif"
+                        android:padding="14dp" android:textSize="15sp"
+                        android:layout_width="match_parent" android:layout_height="56dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Birthdate -->
+            <TextView android:text="Birthdate"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/rounded_edittext"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="14dp" android:paddingEnd="14dp"
+                android:layout_marginBottom="14dp">
+                <EditText android:id="@+id/etMember4Birthdate"
+                    android:hint="Tap to pick birthdate"
+                    android:focusable="false" android:clickable="true"
+                    android:background="@null"
+                    android:fontFamily="@font/sansserif" android:textSize="15sp"
+                    android:layout_width="0dp" android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <TextView android:text="📅" android:textSize="20sp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- Marital Status -->
+            <TextView android:text="Marital Status"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember4MaritalStatus"
+                android:hint="e.g. Single, Married, Widowed"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Religion -->
+            <TextView android:text="Religion"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember4Religion"
+                android:hint="e.g. Roman Catholic"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Educational Attainment -->
+            <TextView android:text="Educational Attainment"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember4Education"
+                android:hint="e.g. College Graduate"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Occupation Type -->
+            <TextView android:text="Occupation Type"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember4OccupationType"
+                android:hint="e.g. Farmer, Nurse, Driver"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Place of Work -->
+            <TextView android:text="Place of Work"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember4PlaceOfWork"
+                android:hint="e.g. Barangay Health Center"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Length of Residence -->
+            <TextView android:text="Length of Residence"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember4LengthOfResidence"
+                android:hint="e.g. 10 years"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Dialect / Language Spoken -->
+            <TextView android:text="Dialect / Language Spoken"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember4Dialect"
+                android:hint="e.g. Tagalog, Bisaya"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- FAMILY MEMBER #5 -->
+    <!-- ══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/rounded_card"
+        android:elevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="#E65100">
+
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="👤"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Family Member #5"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Household member information"
+                    android:textSize="11sp"
+                    android:textColor="#FFE0B2"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Full Name -->
+            <TextView android:text="Full Name"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember5Name"
+                android:hint="e.g. Juan Dela Cruz"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Relation to Head -->
+            <TextView android:text="Relation to Head of Family"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember5Relation"
+                android:hint="e.g. Head, Spouse, Child"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Gender + Age -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="14dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:layout_marginEnd="8dp">
+                    <TextView android:text="Gender"
+                        android:textSize="13sp" android:textStyle="bold"
+                        android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                        android:layout_marginBottom="6dp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <EditText android:id="@+id/etMember5Gender"
+                        android:hint="Male / Female"
+                        android:background="@drawable/rounded_edittext"
+                        android:fontFamily="@font/sansserif"
+                        android:padding="14dp" android:textSize="15sp"
+                        android:layout_width="match_parent" android:layout_height="56dp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:text="Age"
+                        android:textSize="13sp" android:textStyle="bold"
+                        android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                        android:layout_marginBottom="6dp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <EditText android:id="@+id/etMember5Age"
+                        android:hint="e.g. 32"
+                        android:inputType="number"
+                        android:background="@drawable/rounded_edittext"
+                        android:fontFamily="@font/sansserif"
+                        android:padding="14dp" android:textSize="15sp"
+                        android:layout_width="match_parent" android:layout_height="56dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Birthdate -->
+            <TextView android:text="Birthdate"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/rounded_edittext"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="14dp" android:paddingEnd="14dp"
+                android:layout_marginBottom="14dp">
+                <EditText android:id="@+id/etMember5Birthdate"
+                    android:hint="Tap to pick birthdate"
+                    android:focusable="false" android:clickable="true"
+                    android:background="@null"
+                    android:fontFamily="@font/sansserif" android:textSize="15sp"
+                    android:layout_width="0dp" android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <TextView android:text="📅" android:textSize="20sp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- Marital Status -->
+            <TextView android:text="Marital Status"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember5MaritalStatus"
+                android:hint="e.g. Single, Married, Widowed"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Religion -->
+            <TextView android:text="Religion"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember5Religion"
+                android:hint="e.g. Roman Catholic"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Educational Attainment -->
+            <TextView android:text="Educational Attainment"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember5Education"
+                android:hint="e.g. College Graduate"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Occupation Type -->
+            <TextView android:text="Occupation Type"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember5OccupationType"
+                android:hint="e.g. Farmer, Nurse, Driver"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Place of Work -->
+            <TextView android:text="Place of Work"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember5PlaceOfWork"
+                android:hint="e.g. Barangay Health Center"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Length of Residence -->
+            <TextView android:text="Length of Residence"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember5LengthOfResidence"
+                android:hint="e.g. 10 years"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Dialect / Language Spoken -->
+            <TextView android:text="Dialect / Language Spoken"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMember5Dialect"
+                android:hint="e.g. Tagalog, Bisaya"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- SECTION: Type of Family -->
+    <!-- ══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/rounded_card"
+        android:elevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="#b71c1c">
+
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="🏠"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Type of Family"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Select all that apply"
+                    android:textSize="11sp"
+                    android:textColor="#FFCCCC"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Family Type checkboxes -->
+            <CheckBox android:id="@+id/cbNuclear" android:text="Nuclear"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbExtended" android:text="Extended"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbDyad" android:text="Dyad"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbHomosexual" android:text="Homosexual"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbCohabiting" android:text="Cohabiting"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbBlended" android:text="Blended"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbWithGrandparents" android:text="With Grandparents"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbSingleParent" android:text="Single Parent"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:textColor="@color/textDark"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+            <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                android:background="#E5E5E5" android:layout_marginVertical="14dp"/>
+
+            <!-- Locus of Power -->
+            <TextView android:text="Locus of Power"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgFamilyPower"
+                android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <RadioButton android:id="@+id/rbPatriarchal" android:text="Patriarchal"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbMatriarchal" android:text="Matriarchal"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbEgalitarian" android:text="Egalitarian"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbMatricentric" android:text="Matricentric"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+            </RadioGroup>
+
+            <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                android:background="#E5E5E5" android:layout_marginVertical="14dp"/>
+
+            <!-- Place of Residence -->
+            <TextView android:text="Place of Residence"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgFamilyResidence"
+                android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <RadioButton android:id="@+id/rbPatrilocal" android:text="Patrilocal"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbMatrilocal" android:text="Matrilocal"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbBilocal" android:text="Bilocal"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbNeolocal" android:text="Neolocal"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+            </RadioGroup>
+
+            <View android:layout_width="match_parent" android:layout_height="0.5dp"
+                android:background="#E5E5E5" android:layout_marginVertical="14dp"/>
+
+            <!-- Descent -->
+            <TextView android:text="Descent"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgFamilyDescent"
+                android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <RadioButton android:id="@+id/rbPatrilineal" android:text="Patrilineal"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbMatrilineal" android:text="Matrilineal"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbBilateral" android:text="Bilateral"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+            </RadioGroup>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

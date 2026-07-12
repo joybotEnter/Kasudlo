@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/cream">
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- STICKY TOP HEADER (not inside scroll) -->
+    <!-- ══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_card"
+        android:elevation="6dp">
+
+        <!-- Top row: Back + Title + Icon -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="10dp">
+
+            <!-- Back Button -->
+            <LinearLayout
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/back_button_bg"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="‹"
+                    android:textSize="26sp"
+                    android:textColor="@color/mottoBlue"/>
+            </LinearLayout>
+
+            <!-- Title block -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Community Survey Tool"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/mottoBlue"
+                    android:fontFamily="@font/sansserif"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fill all 6 sections before saving"
+                    android:textSize="11sp"
+                    android:textColor="@color/textMid"
+                    android:fontFamily="@font/sansserif"/>
+            </LinearLayout>
+
+            <!-- Clipboard badge -->
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_icon_circle"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📋"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 4-color brand accent bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:orientation="horizontal">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/mottoBlue"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/mottoGreen"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/mottoOrange"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/mottoRed"/>
+        </LinearLayout>
+
+        <!-- Progress bar row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="12dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Progress"
+                android:textSize="11sp"
+                android:textColor="@color/textMid"
+                android:fontFamily="@font/sansserif"
+                android:layout_marginEnd="10dp"/>
+
+            <!-- 6 section dots -->
+            <View android:id="@+id/dot1"
+                android:layout_width="28dp" android:layout_height="6dp"
+                android:background="@color/mottoBlue"
+                android:layout_marginEnd="4dp"/>
+            <View android:id="@+id/dot2"
+                android:layout_width="28dp" android:layout_height="6dp"
+                android:background="@color/mottoGreen"
+                android:layout_marginEnd="4dp"/>
+            <View android:id="@+id/dot3"
+                android:layout_width="28dp" android:layout_height="6dp"
+                android:background="@color/mottoOrange"
+                android:layout_marginEnd="4dp"/>
+            <View android:id="@+id/dot4"
+                android:layout_width="28dp" android:layout_height="6dp"
+                android:background="@color/mottoRed"
+                android:layout_marginEnd="4dp"/>
+            <View android:id="@+id/dot5"
+                android:layout_width="28dp" android:layout_height="6dp"
+                android:background="@color/mottoBlue"
+                android:layout_marginEnd="4dp"/>
+            <View android:id="@+id/dot6"
+                android:layout_width="28dp" android:layout_height="6dp"
+                android:background="@color/mottoGreen"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/tvSectionCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6 Sections"
+                android:textSize="11sp"
+                android:textColor="@color/mottoBlue"
+                android:textStyle="bold"
+                android:fontFamily="@font/sansserif"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ════════════════ -->
+    <!-- SCROLLABLE BODY -->
+    <!-- ════════════════ -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <!-- ── SECTION 1 — Blue ── -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/rounded_card"
+                android:elevation="3dp">
+
+                <!-- Section tab header -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:background="#1a4fa8">
+                    <TextView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:text="1"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#1a4fa8"
+                        android:gravity="center"
+                        android:background="@drawable/circle_bg"
+                        android:layout_marginEnd="10dp"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Survey Header"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/sansserif"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📋"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/section1"
+                    layout="@layout/layout_assessment_section1"/>
+
+            </LinearLayout>
+
+            <!-- ── SECTION 2 — Green ── -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/rounded_card"
+                android:elevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:background="#2e7d32">
+                    <TextView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:text="2"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#2e7d32"
+                        android:gravity="center"
+                        android:background="@drawable/circle_bg"
+                        android:layout_marginEnd="10dp"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Household Profile"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/sansserif"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🏠"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/section2"
+                    layout="@layout/layout_assessment_section2"/>
+
+            </LinearLayout>
+
+            <!-- ── SECTION 3 — Orange ── -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/rounded_card"
+                android:elevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:background="#e65100">
+                    <TextView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:text="3"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#e65100"
+                        android:gravity="center"
+                        android:background="@drawable/circle_bg"
+                        android:layout_marginEnd="10dp"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Health Status"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/sansserif"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🩺"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/section3"
+                    layout="@layout/layout_assessment_section3"/>
+
+            </LinearLayout>
+
+            <!-- ── SECTION 4 — Red ── -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/rounded_card"
+                android:elevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:background="#c62828">
+                    <TextView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:text="4"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#c62828"
+                        android:gravity="center"
+                        android:background="@drawable/circle_bg"
+                        android:layout_marginEnd="10dp"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Immunization Records"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/sansserif"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="💉"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/section4"
+                    layout="@layout/layout_assessment_section4"/>
+
+            </LinearLayout>
+
+            <!-- ── SECTION 5 — Blue ── -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/rounded_card"
+                android:elevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:background="#1a4fa8">
+                    <TextView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:text="5"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#1a4fa8"
+                        android:gravity="center"
+                        android:background="@drawable/circle_bg"
+                        android:layout_marginEnd="10dp"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Environmental Health"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/sansserif"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🌿"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/section5"
+                    layout="@layout/layout_assessment_section5"/>
+
+            </LinearLayout>
+
+            <!-- ── SECTION 6 — Green ── -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/rounded_card"
+                android:elevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:background="#2e7d32">
+                    <TextView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:text="6"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#2e7d32"
+                        android:gravity="center"
+                        android:background="@drawable/circle_bg"
+                        android:layout_marginEnd="10dp"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Remarks &amp; Signature"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/sansserif"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="✍️"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/section6"
+                    layout="@layout/layout_assessment_section6"/>
+
+            </LinearLayout>
+
+            <!-- ── SAVE BUTTON ── -->
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/mottoBlue"
+                android:text="💾  Save Assessment"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/sansserif"
+                android:stateListAnimator="@null"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

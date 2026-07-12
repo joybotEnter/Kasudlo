@@ -1,0 +1,847 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/cream">
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- STICKY TOP HEADER                      -->
+    <!-- ══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_card"
+        android:elevation="6dp">
+
+        <!-- Top row: Back + Title + Icon -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="10dp">
+
+            <!-- Back Button -->
+            <LinearLayout
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/back_button_bg"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="‹"
+                    android:textSize="26sp"
+                    android:textColor="@color/mottoBlue"/>
+            </LinearLayout>
+
+            <!-- Title block -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Assessment Details"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/mottoBlue"
+                    android:fontFamily="@font/sansserif"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Read-only summary of all 6 sections"
+                    android:textSize="11sp"
+                    android:textColor="@color/textMid"
+                    android:fontFamily="@font/sansserif"/>
+            </LinearLayout>
+
+            <!-- Clipboard badge -->
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_icon_circle"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📋"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 4-color brand accent bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:orientation="horizontal">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/mottoBlue"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/mottoGreen"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/mottoOrange"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/mottoRed"/>
+        </LinearLayout>
+
+        <!-- Section count row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="12dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sections"
+                android:textSize="11sp"
+                android:textColor="@color/textMid"
+                android:fontFamily="@font/sansserif"
+                android:layout_marginEnd="10dp"/>
+
+            <View android:layout_width="28dp" android:layout_height="6dp"
+                android:background="@color/mottoBlue" android:layout_marginEnd="4dp"/>
+            <View android:layout_width="28dp" android:layout_height="6dp"
+                android:background="@color/mottoGreen" android:layout_marginEnd="4dp"/>
+            <View android:layout_width="28dp" android:layout_height="6dp"
+                android:background="@color/mottoOrange" android:layout_marginEnd="4dp"/>
+            <View android:layout_width="28dp" android:layout_height="6dp"
+                android:background="@color/mottoRed" android:layout_marginEnd="4dp"/>
+            <View android:layout_width="28dp" android:layout_height="6dp"
+                android:background="@color/mottoBlue" android:layout_marginEnd="4dp"/>
+            <View android:layout_width="28dp" android:layout_height="6dp"
+                android:background="@color/mottoGreen"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6 Sections"
+                android:textSize="11sp"
+                android:textColor="@color/mottoBlue"
+                android:textStyle="bold"
+                android:fontFamily="@font/sansserif"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ════════════════ -->
+    <!-- SCROLLABLE BODY -->
+    <!-- ════════════════ -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <!-- ══════════════════════════════════════════════
+                 SURVEY HEADER
+                 ══════════════════════════════════════════════ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/rounded_card"
+                android:elevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:background="#1a4fa8">
+                    <TextView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:text="📋"
+                        android:textSize="15sp"
+                        android:gravity="center"
+                        android:layout_marginEnd="10dp"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Survey Header"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/sansserif"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView android:text="Control No." android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvControlNo" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="No. of Family Members" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvFamilySize" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Address" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvAddress" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Informant" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvInformant" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Surveyed By" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvSurveyedBy" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="1st Visit Date" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvFirstVisit" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="2nd Visit Date" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvSecondVisit" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="3rd Visit Date" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvThirdVisit" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Time Started" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvTimeStarted" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Time Finished" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvTimeFinished" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Status of Last Visit" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvStatusLastVisit" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ══════════════════════════════════════════════
+                 SECTION I — DEMOGRAPHIC VARIABLE
+                 ══════════════════════════════════════════════ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/rounded_card"
+                android:elevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:background="#2e7d32">
+                    <TextView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:text="👨‍👩‍👧‍👦"
+                        android:textSize="15sp"
+                        android:gravity="center"
+                        android:layout_marginEnd="10dp"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="I. Demographic Variable"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/sansserif"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView android:text="HOUSEHOLD HEAD" android:fontFamily="@font/sansserif" android:textSize="11sp" android:textAllCaps="true" android:textColor="@color/textMid" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Full Name" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvMember1Name" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Relation to Head of Family" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvMember1Relation" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Gender" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvMember1Sex" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Age" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvMember1Age" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Birthdate" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvMember1Birthdate" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Marital Status" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvMember1MaritalStatus" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Religion" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvMember1Religion" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Educational Attainment" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvMember1Education" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Occupation Type" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvMember1OccupationType" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Place of Work" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvMember1PlaceOfWork" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Length of Residence" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvMember1LengthOfResidence" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Dialect / Language Spoken" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvDialect" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#20000000" android:layout_marginVertical="10dp"/>
+
+                    <TextView android:text="Type of Family" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvFamilyType" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Locus of Power" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvFamilyPower" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Place of Residence" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvFamilyResidence" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Descent" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvFamilyDescent" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ══════════════════════════════════════════════
+                 SECTION II — SOCIO-ECONOMIC, CULTURAL & ENVIRONMENTAL
+                 ══════════════════════════════════════════════ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/rounded_card"
+                android:elevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:background="#e65100">
+                    <TextView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:text="🏘️"
+                        android:textSize="15sp"
+                        android:gravity="center"
+                        android:layout_marginEnd="10dp"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="II. Socio-Economic, Cultural &amp; Environmental"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/sansserif"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView android:text="Services in the Community" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvCommunityServices" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Institutional Facilities" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvFacilities" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Traditions / Customs" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvTraditions" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Perceived Community Leaders" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvLeaders" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Community Problem / Conflict" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvConflicts" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Conflict Resolution" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvResolution" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Recreational Facilities" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvRecreation" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Means of Transportation" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvTransportation" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Communication Facilities" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvCommunication" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#20000000" android:layout_marginVertical="10dp"/>
+
+                    <TextView android:text="Source of Income" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="Select all that apply"
+                        android:textSize="11sp"
+                        android:textColor="@color/textDark"
+                        android:fontFamily="@font/sansserif"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvIncomeSource" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Monthly Income" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvMonthlyIncome" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Income Adequacy" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvIncomeAdequacy" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Earner 1 Position / Income" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvEarner1" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Earner 2 Position / Income" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvEarner2" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Earner 3 Position / Income" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvEarner3" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Earner 4 Position / Income" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvEarner4" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#20000000" android:layout_marginVertical="10dp"/>
+
+                    <TextView android:text="RHU Physician" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvRhuPhysician" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="RHU Nurse" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvRhuNurse" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="BHC Awareness" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvBhcAwareness" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="BHC Midwife / Schedule / Health Services" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvBhcDetails" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Concerns / Suggestions" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvConcernsSuggestions" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ══════════════════════════════════════════════
+                 SECTION III — HEALTH STATUS
+                 ══════════════════════════════════════════════ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/rounded_card"
+                android:elevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:background="#c62828">
+                    <TextView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:text="🏥"
+                        android:textSize="15sp"
+                        android:gravity="center"
+                        android:layout_marginEnd="10dp"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="III. Health Status"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/sansserif"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView android:text="SMOKER" android:fontFamily="@font/sansserif" android:textSize="11sp" android:textAllCaps="true" android:textColor="@color/textMid" android:layout_marginBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Smoker in Household" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvSmoker" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Smoker Name / Age / Age Started / Frequency / Reason" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvSmokerDetails" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#20000000" android:layout_marginVertical="10dp"/>
+
+                    <TextView android:text="ALCOHOL" android:fontFamily="@font/sansserif" android:textSize="11sp" android:textAllCaps="true" android:textColor="@color/textMid" android:layout_marginBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Alcohol Drinker in Household" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvAlcohol" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Drinker Name / Age / Age Started / Frequency / Reason" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvAlcoholDetails" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#20000000" android:layout_marginVertical="10dp"/>
+
+                    <TextView android:text="DRUGS" android:fontFamily="@font/sansserif" android:textSize="11sp" android:textAllCaps="true" android:textColor="@color/textMid" android:layout_marginBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Drug User in Household" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvDrugs" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Drug User Name / Age / Age Started / Types Used / Reason" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvDrugDetails" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#20000000" android:layout_marginVertical="10dp"/>
+
+                    <TextView android:text="MORBIDITY" android:fontFamily="@font/sansserif" android:textSize="11sp" android:textAllCaps="true" android:textColor="@color/textMid" android:layout_marginBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Name / Age / Gender / Cause" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvMorbidity" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Admitted / Intervention" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvMorbidityIntervention" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#20000000" android:layout_marginVertical="10dp"/>
+
+                    <TextView android:text="MORTALITY" android:fontFamily="@font/sansserif" android:textSize="11sp" android:textAllCaps="true" android:textColor="@color/textMid" android:layout_marginBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Name / Age / Gender / Cause" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvMortality" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#20000000" android:layout_marginVertical="10dp"/>
+
+                    <TextView android:text="NON-COMMUNICABLE DISEASE (NCD)" android:fontFamily="@font/sansserif" android:textSize="11sp" android:textAllCaps="true" android:textColor="@color/textMid" android:layout_marginBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Name / Age / Gender / Type" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvNcd" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#20000000" android:layout_marginVertical="10dp"/>
+
+                    <TextView android:text="COMMUNICABLE DISEASE (CD)" android:fontFamily="@font/sansserif" android:textSize="11sp" android:textAllCaps="true" android:textColor="@color/textMid" android:layout_marginBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Name / Age / Gender / Type" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvCd" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#20000000" android:layout_marginVertical="10dp"/>
+
+                    <TextView android:text="BLOOD PRESSURE" android:fontFamily="@font/sansserif" android:textSize="11sp" android:textAllCaps="true" android:textColor="@color/textMid" android:layout_marginBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Name / Age / Gender / Reading" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvBloodPressure" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#20000000" android:layout_marginVertical="10dp"/>
+
+                    <TextView android:text="ANTHROPOMETRIC DATA" android:fontFamily="@font/sansserif" android:textSize="11sp" android:textAllCaps="true" android:textColor="@color/textMid" android:layout_marginBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Name / Age / Weight / Height / BMI / MUAC" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvAnthropometric" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Waist Circumference / Hip Circumference / Waist-Hip Ratio" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvWaistHip" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#20000000" android:layout_marginVertical="10dp"/>
+
+                    <TextView android:text="PRENATAL CARE" android:fontFamily="@font/sansserif" android:textSize="11sp" android:textAllCaps="true" android:textColor="@color/textMid" android:layout_marginBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Name / AOG / Antenatal Checkup / Tetanus" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvAntenatal" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#20000000" android:layout_marginVertical="10dp"/>
+
+                    <TextView android:text="IMMUNIZATION" android:fontFamily="@font/sansserif" android:textSize="11sp" android:textAllCaps="true" android:textColor="@color/textMid" android:layout_marginBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Name / Age / Gender" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvImmunization" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="BCG / DPT1-3 / OPV1-3 / Hepa1-3 / Measles / FIC / Incomplete / Complete Age" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvImmunizationDetails" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#20000000" android:layout_marginVertical="10dp"/>
+
+                    <TextView android:text="FAMILY PLANNING" android:fontFamily="@font/sansserif" android:textSize="11sp" android:textAllCaps="true" android:textColor="@color/textMid" android:layout_marginBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="FP Status" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvFamilyPlanning" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="FP Method / Reason" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvFpDetails" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#20000000" android:layout_marginVertical="10dp"/>
+
+                    <TextView android:text="HEALTH SEEKING BEHAVIOR" android:fontFamily="@font/sansserif" android:textSize="11sp" android:textAllCaps="true" android:textColor="@color/textMid" android:layout_marginBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Consults" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvConsults" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Medicines Used" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvMedicines" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Medical Checkup Frequency" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvMedCheckup" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Dental Checkup" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvDentalCheckup" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Health Budget" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvHealthBudget" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Measures When Sick" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvMeasuresSick" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ══════════════════════════════════════════════
+                 SECTION IV — NUTRITIONAL STATUS
+                 ══════════════════════════════════════════════ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/rounded_card"
+                android:elevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:background="#1a4fa8">
+                    <TextView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:text="🥗"
+                        android:textSize="15sp"
+                        android:gravity="center"
+                        android:layout_marginEnd="10dp"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="IV. Nutritional Status"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/sansserif"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView android:text="Food Choice (1st / 2nd)" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvFoodChoice" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Food Servings (Staple / Viand)" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvFoodServings" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Food Preparation Frequency" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvFoodPrepFreq" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Food Preparation Method" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvFoodPreparation" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Food Storage" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvFoodStorage" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Where to Buy Food" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvFoodBuy" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Reason for Buying Food Outside" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvFoodBuyReason" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Cooking Fuel" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvCookingFuel" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Canned Food / Carbonated Beverages / Grilled Food" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvUnhealthyFood" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ══════════════════════════════════════════════
+                 SECTION V — ENVIRONMENTAL HEALTH
+                 ══════════════════════════════════════════════ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/rounded_card"
+                android:elevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:background="#2e7d32">
+                    <TextView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:text="🌿"
+                        android:textSize="15sp"
+                        android:gravity="center"
+                        android:layout_marginEnd="10dp"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="V. Environmental Health"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/sansserif"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView android:text="Home Ownership" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvHomeOwnership" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="House Construction" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvConstruction" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="No. of Rooms" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvNumRooms" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Space Adequacy" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvSpaceAdequacy" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Ventilation" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvVentilation" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Lighting Adequacy / Facility" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvLighting" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#20000000" android:layout_marginVertical="10dp"/>
+
+                    <TextView android:text="WATER" android:fontFamily="@font/sansserif" android:textSize="11sp" android:textAllCaps="true" android:textColor="@color/textMid" android:layout_marginBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Source (Drinking / Cooking / Bathing)" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvWaterSource" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Ownership / Potable / Storage / Distance" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvWaterDetails" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#20000000" android:layout_marginVertical="10dp"/>
+
+                    <TextView android:text="TOILET &amp; SANITATION" android:fontFamily="@font/sansserif" android:textSize="11sp" android:textAllCaps="true" android:textColor="@color/textMid" android:layout_marginBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Toilet Type / Ownership / Sanitation" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvToilet" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Kitchen Sanitation / Drainage" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvKitchenDrainage" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#20000000" android:layout_marginVertical="10dp"/>
+
+                    <TextView android:text="WASTE MANAGEMENT" android:fontFamily="@font/sansserif" android:textSize="11sp" android:textAllCaps="true" android:textColor="@color/textMid" android:layout_marginBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Waste Disposal Method" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvWasteDisposal" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Waste Segregation" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvWasteSegregation" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Garbage Storage" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvGarbageStorage" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#20000000" android:layout_marginVertical="10dp"/>
+
+                    <TextView android:text="ANIMALS" android:fontFamily="@font/sansserif" android:textSize="11sp" android:textAllCaps="true" android:textColor="@color/textMid" android:layout_marginBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:text="Kind / Number / Kept Where / Vaccination" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvAnimals" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Uses Safety Devices" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvSafetyDevices" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ══════════════════════════════════════════════
+                 SECTION VI — OTHER DATA
+                 ══════════════════════════════════════════════ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/rounded_card"
+                android:elevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:background="#1a4fa8">
+                    <TextView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:text="📊"
+                        android:textSize="15sp"
+                        android:gravity="center"
+                        android:layout_marginEnd="10dp"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="VI. Other Data"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/sansserif"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView android:text="Supplies Availability" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvSuppliesAvailability" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Ballot System" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvBallotSystem" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

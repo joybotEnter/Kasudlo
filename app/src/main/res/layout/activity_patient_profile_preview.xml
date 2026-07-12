@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/cream">
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- STICKY TOP HEADER                      -->
+    <!-- ══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_card"
+        android:elevation="6dp">
+
+        <!-- Top row: Back + Title + Icon -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="10dp">
+
+            <!-- Back Button -->
+            <LinearLayout
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/back_button_bg"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="‹"
+                    android:textSize="26sp"
+                    android:textColor="@color/mottoBlue"/>
+            </LinearLayout>
+
+            <!-- Title block -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Profile"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/mottoBlue"
+                    android:fontFamily="@font/sansserif"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Personal &amp; health information"
+                    android:textSize="11sp"
+                    android:textColor="@color/textMid"
+                    android:fontFamily="@font/sansserif"/>
+            </LinearLayout>
+
+            <!-- Profile badge -->
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_icon_circle"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="👤"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 4-color brand accent bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:orientation="horizontal">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/mottoBlue"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/mottoGreen"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/mottoOrange"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/mottoRed"/>
+        </LinearLayout>
+
+        <!-- Section count row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="12dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sections"
+                android:textSize="11sp"
+                android:textColor="@color/textMid"
+                android:fontFamily="@font/sansserif"
+                android:layout_marginEnd="10dp"/>
+
+            <View
+                android:layout_width="28dp"
+                android:layout_height="6dp"
+                android:background="@color/mottoBlue"
+                android:layout_marginEnd="4dp"/>
+            <View
+                android:layout_width="28dp"
+                android:layout_height="6dp"
+                android:background="@color/mottoGreen"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2 Sections"
+                android:textSize="11sp"
+                android:textColor="@color/mottoBlue"
+                android:textStyle="bold"
+                android:fontFamily="@font/sansserif"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ════════════════ -->
+    <!-- SCROLLABLE BODY -->
+    <!-- ════════════════ -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView
+                android:id="@+id/tvNoData"
+                android:text="No profile data on file yet."
+                android:fontFamily="@font/sansserif"
+                android:textSize="15sp"
+                android:textColor="@color/textMid"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"/>
+
+            <!-- ── Personal Information ── -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/rounded_card"
+                android:elevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:background="#1a4fa8">
+                    <TextView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:text="👤"
+                        android:textSize="15sp"
+                        android:gravity="center"
+                        android:layout_marginEnd="10dp"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Personal Information"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/sansserif"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView android:text="Full Name" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvName" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Age" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvAge" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Birthday" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvBirthday" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Sex" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvSex" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Address" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvAddress" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Contact" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvContact" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Email" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvEmail" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="PhilHealth No." android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvPhilhealth" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Blood Type" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvBloodType" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Member Type" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvMemberType" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Health Facility" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvFacility" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ── Health Information ── -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/rounded_card"
+                android:elevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:background="#2e7d32">
+                    <TextView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:text="🩺"
+                        android:textSize="15sp"
+                        android:gravity="center"
+                        android:layout_marginEnd="10dp"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Health Information"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/sansserif"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView android:text="Smoking" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvSmoking" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Alcohol" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvAlcohol" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Highest BP" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvHighestBP" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Allergy" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvAllergy" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Diabetes" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvDiabetes" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                    <TextView android:text="Asthma" android:fontFamily="@font/sansserif" android:textSize="12sp" android:textColor="@color/textMid" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:id="@+id/tvAsthma" android:fontFamily="@font/sansserif" android:textSize="15sp" android:textColor="@color/textDark" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

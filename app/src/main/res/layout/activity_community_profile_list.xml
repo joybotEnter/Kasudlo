@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- ══════════════════════════════════════ -->
+        <!-- STICKY TOP HEADER                      -->
+        <!-- ══════════════════════════════════════ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rounded_card"
+            android:elevation="6dp">
+
+            <!-- Top row: Back + Title + Icon -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="10dp">
+
+                <!-- Back Button -->
+                <LinearLayout
+                    android:id="@+id/btnBack"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/back_button_bg"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="‹"
+                        android:textSize="26sp"
+                        android:textColor="@color/mottoBlue"/>
+                </LinearLayout>
+
+                <!-- Title block -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="My Assessments"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/mottoBlue"
+                        android:fontFamily="@font/sansserif"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tap ＋ to create a new assessment"
+                        android:textSize="11sp"
+                        android:textColor="@color/textMid"
+                        android:fontFamily="@font/sansserif"/>
+                </LinearLayout>
+
+                <!-- Clipboard badge -->
+                <LinearLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_icon_circle"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📋"
+                        android:textSize="18sp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 4-color brand accent bar -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/mottoBlue"/>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/mottoGreen"/>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/mottoOrange"/>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/mottoRed"/>
+            </LinearLayout>
+
+            <!-- Record count row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="12dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Records"
+                    android:textSize="11sp"
+                    android:textColor="@color/textMid"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_marginEnd="10dp"/>
+
+                <!-- Colored dot indicators (decorative, matching survey form) -->
+                <View
+                    android:layout_width="28dp"
+                    android:layout_height="6dp"
+                    android:background="@color/mottoBlue"
+                    android:layout_marginEnd="4dp"/>
+                <View
+                    android:layout_width="28dp"
+                    android:layout_height="6dp"
+                    android:background="@color/mottoGreen"
+                    android:layout_marginEnd="4dp"/>
+                <View
+                    android:layout_width="28dp"
+                    android:layout_height="6dp"
+                    android:background="@color/mottoOrange"
+                    android:layout_marginEnd="4dp"/>
+                <View
+                    android:layout_width="28dp"
+                    android:layout_height="6dp"
+                    android:background="@color/mottoRed"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- ════════════════════ -->
+        <!-- EMPTY STATE MESSAGE -->
+        <!-- ════════════════════ -->
+        <TextView
+            android:id="@+id/tvEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No assessments yet.&#10;Tap ＋ to fill your first one."
+            android:textSize="15sp"
+            android:textColor="@color/textMid"
+            android:fontFamily="@font/sansserif"
+            android:gravity="center"
+            android:padding="48dp"
+            android:visibility="gone"/>
+
+        <!-- ═══════════════════════ -->
+        <!-- ASSESSMENT LIST        -->
+        <!-- ═══════════════════════ -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerAssessments"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="12dp"
+            android:clipToPadding="false"/>
+
+    </LinearLayout>
+
+    <!-- ═══════════════════════════════════ -->
+    <!-- FAB — New Assessment               -->
+    <!-- ═══════════════════════════════════ -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabNewAssessment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/mottoBlue"
+        android:src="@android:drawable/ic_input_add"
+        android:contentDescription="New Assessment"
+        app:tint="@android:color/white"
+        app:elevation="6dp"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

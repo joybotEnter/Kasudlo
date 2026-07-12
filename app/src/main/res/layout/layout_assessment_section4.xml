@@ -1,0 +1,1070 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="4dp">
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- SECTION HEADER -->
+    <!-- ══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/rounded_card"
+        android:elevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="#7b1fa2">
+
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="🩺"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="III. Health and Illness Pattern"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Lifestyle, nutrition and health indicators"
+                    android:textSize="11sp"
+                    android:textColor="#E1BEE7"
+                    android:fontFamily="@font/sansserif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- SMOKING -->
+    <!-- ══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/rounded_card"
+        android:elevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="#6d4c41">
+
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="🚬"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:text="Smoking"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/sansserif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView android:text="Is there a smoker in the household?"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgSmoker"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="14dp">
+                <RadioButton android:id="@+id/rbSmokerYes" android:text="Yes"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:layout_marginEnd="16dp"/>
+                <RadioButton android:id="@+id/rbSmokerNo" android:text="No"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"/>
+            </RadioGroup>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp"
+                android:background="#E5E5E5" android:layout_marginBottom="14dp"/>
+
+            <TextView android:text="Smoker's Name"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etSmokerName"
+                android:hint="Full name"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="14dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:layout_marginEnd="8dp">
+                    <TextView android:text="Age"
+                        android:textSize="13sp" android:textStyle="bold"
+                        android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                        android:layout_marginBottom="6dp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <EditText android:id="@+id/etSmokerAge"
+                        android:hint="e.g. 30"
+                        android:inputType="number"
+                        android:background="@drawable/rounded_edittext"
+                        android:fontFamily="@font/sansserif"
+                        android:padding="14dp" android:textSize="15sp"
+                        android:layout_width="match_parent" android:layout_height="56dp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:text="Age Started"
+                        android:textSize="13sp" android:textStyle="bold"
+                        android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                        android:layout_marginBottom="6dp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <EditText android:id="@+id/etSmokerAgeStarted"
+                        android:hint="e.g. 18"
+                        android:inputType="number"
+                        android:background="@drawable/rounded_edittext"
+                        android:fontFamily="@font/sansserif"
+                        android:padding="14dp" android:textSize="15sp"
+                        android:layout_width="match_parent" android:layout_height="56dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView android:text="Frequency"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etSmokerFrequency"
+                android:hint="e.g. 1 pack/day"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <TextView android:text="Reason"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etSmokerReason"
+                android:hint="e.g. Stress, Peer pressure"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- DRUGS -->
+    <!-- ══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/rounded_card"
+        android:elevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="#c62828">
+
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="💊"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:text="Drugs"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/sansserif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView android:text="Is there a drug user in the household?"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgDrugs"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="14dp">
+                <RadioButton android:id="@+id/rbDrugsYes" android:text="Yes"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:layout_marginEnd="16dp"/>
+                <RadioButton android:id="@+id/rbDrugsNo" android:text="No"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"/>
+            </RadioGroup>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp"
+                android:background="#E5E5E5" android:layout_marginBottom="14dp"/>
+
+            <TextView android:text="Types of Drugs Used"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etDrugTypesUsed"
+                android:hint="e.g. Shabu, Marijuana"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <TextView android:text="Drug User's Name"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etDrugName"
+                android:hint="Full name"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="14dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:layout_marginEnd="8dp">
+                    <TextView android:text="Age"
+                        android:textSize="13sp" android:textStyle="bold"
+                        android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                        android:layout_marginBottom="6dp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <EditText android:id="@+id/etDrugAge"
+                        android:hint="e.g. 25"
+                        android:inputType="number"
+                        android:background="@drawable/rounded_edittext"
+                        android:fontFamily="@font/sansserif"
+                        android:padding="14dp" android:textSize="15sp"
+                        android:layout_width="match_parent" android:layout_height="56dp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:text="Age Started"
+                        android:textSize="13sp" android:textStyle="bold"
+                        android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                        android:layout_marginBottom="6dp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <EditText android:id="@+id/etDrugAgeStarted"
+                        android:hint="e.g. 20"
+                        android:inputType="number"
+                        android:background="@drawable/rounded_edittext"
+                        android:fontFamily="@font/sansserif"
+                        android:padding="14dp" android:textSize="15sp"
+                        android:layout_width="match_parent" android:layout_height="56dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView android:text="Reason"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etDrugReason"
+                android:hint="e.g. Peer influence"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- ALCOHOL -->
+    <!-- ══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/rounded_card"
+        android:elevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="#e65100">
+
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="🍺"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:text="Alcohol"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/sansserif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView android:text="Is there an alcohol drinker in the household?"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgAlcohol"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="14dp">
+                <RadioButton android:id="@+id/rbAlcoholYes" android:text="Yes"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:layout_marginEnd="16dp"/>
+                <RadioButton android:id="@+id/rbAlcoholNo" android:text="No"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"/>
+            </RadioGroup>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp"
+                android:background="#E5E5E5" android:layout_marginBottom="14dp"/>
+
+            <TextView android:text="Alcohol User's Name"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etAlcoholName"
+                android:hint="Full name"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="14dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:layout_marginEnd="8dp">
+                    <TextView android:text="Age"
+                        android:textSize="13sp" android:textStyle="bold"
+                        android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                        android:layout_marginBottom="6dp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <EditText android:id="@+id/etAlcoholAge"
+                        android:hint="e.g. 35"
+                        android:inputType="number"
+                        android:background="@drawable/rounded_edittext"
+                        android:fontFamily="@font/sansserif"
+                        android:padding="14dp" android:textSize="15sp"
+                        android:layout_width="match_parent" android:layout_height="56dp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:text="Age Started"
+                        android:textSize="13sp" android:textStyle="bold"
+                        android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                        android:layout_marginBottom="6dp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <EditText android:id="@+id/etAlcoholAgeStarted"
+                        android:hint="e.g. 22"
+                        android:inputType="number"
+                        android:background="@drawable/rounded_edittext"
+                        android:fontFamily="@font/sansserif"
+                        android:padding="14dp" android:textSize="15sp"
+                        android:layout_width="match_parent" android:layout_height="56dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView android:text="Frequency"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etAlcoholFrequency"
+                android:hint="e.g. Daily, Weekends only"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <TextView android:text="Reason"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etAlcoholReason"
+                android:hint="e.g. Social, Stress"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- USE OF SAFETY PRECAUTIONS -->
+    <!-- ══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/rounded_card"
+        android:elevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="#2e7d32">
+
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="🦺"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:text="Use of Safety Precautions"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/sansserif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView android:text="Use of Safety Precautions"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgSafetyPrecautions"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp">
+                <RadioButton android:id="@+id/rbSafetyPracticed" android:text="Practiced"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+                <RadioButton android:id="@+id/rbSafetyNotPracticed" android:text="Not Practiced"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:textColor="@color/textDark"/>
+            </RadioGroup>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- NUTRITIONAL STATUS / ANTHROPOMETRIC -->
+    <!-- ══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/rounded_card"
+        android:elevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="#1a7a4a">
+
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="📏"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:text="Nutritional Status / Anthropometric"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/sansserif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView android:text="Name"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etAnthrName"
+                android:hint="Full name"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <TextView android:text="Age"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etAnthrAge"
+                android:hint="e.g. 28"
+                android:inputType="number"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Weight + Height -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="14dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:layout_marginEnd="8dp">
+                    <TextView android:text="Weight (kg)"
+                        android:textSize="13sp" android:textStyle="bold"
+                        android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                        android:layout_marginBottom="6dp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <EditText android:id="@+id/etAnthrWeight"
+                        android:hint="e.g. 55.5"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/rounded_edittext"
+                        android:fontFamily="@font/sansserif"
+                        android:padding="14dp" android:textSize="15sp"
+                        android:layout_width="match_parent" android:layout_height="56dp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:text="Height (cm)"
+                        android:textSize="13sp" android:textStyle="bold"
+                        android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                        android:layout_marginBottom="6dp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <EditText android:id="@+id/etAnthrHeight"
+                        android:hint="e.g. 160"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/rounded_edittext"
+                        android:fontFamily="@font/sansserif"
+                        android:padding="14dp" android:textSize="15sp"
+                        android:layout_width="match_parent" android:layout_height="56dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- BMI (Body Mass Index) + Remarks -->
+            <TextView android:text="BMI (Body Mass Index)"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etAnthrBmi"
+                android:hint="e.g. 21.5"
+                android:inputType="numberDecimal"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="8dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+            <TextView android:text="BMI Remarks"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etBmiRemarks"
+                android:hint="e.g. Normal, Overweight, Obese"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- WC/HC (Waist Circumference / Hip Circumference) + Remarks -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:layout_marginEnd="8dp">
+                    <TextView android:text="WC – Waist Circumference (cm)"
+                        android:textSize="13sp" android:textStyle="bold"
+                        android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                        android:layout_marginBottom="6dp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <EditText android:id="@+id/etWaistCircumference"
+                        android:hint="e.g. 72"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/rounded_edittext"
+                        android:fontFamily="@font/sansserif"
+                        android:padding="14dp" android:textSize="15sp"
+                        android:layout_width="match_parent" android:layout_height="56dp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:text="HC – Hip Circumference (cm)"
+                        android:textSize="13sp" android:textStyle="bold"
+                        android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                        android:layout_marginBottom="6dp"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <EditText android:id="@+id/etHipCircumference"
+                        android:hint="e.g. 90"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/rounded_edittext"
+                        android:fontFamily="@font/sansserif"
+                        android:padding="14dp" android:textSize="15sp"
+                        android:layout_width="match_parent" android:layout_height="56dp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView android:text="WC/HC Remarks"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etWcHcRemarks"
+                android:hint="e.g. Normal, At Risk"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- Waist-Hip Ratio -->
+            <TextView android:text="Waist-Hip Ratio"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etWaistHipRatio"
+                android:hint="e.g. 0.80"
+                android:inputType="numberDecimal"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <!-- MUAC (Mid Upper Arm Circumference) + Remarks -->
+            <TextView android:text="MUAC (Mid Upper Arm Circumference) (cm)"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etAnthrMuac"
+                android:hint="e.g. 26"
+                android:inputType="numberDecimal"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginBottom="8dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+            <TextView android:text="MUAC Remarks"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etMuacRemarks"
+                android:hint="e.g. Normal, Malnourished"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- FOOD CHOICES -->
+    <!-- ══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/rounded_card"
+        android:elevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="#1a4fa8">
+
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="🍽️"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:text="Food Choices"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/sansserif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView android:text="Primary Food Choice"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgFoodChoice"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp">
+                <RadioButton android:id="@+id/rbMeat" android:text="Meat"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"/>
+                <RadioButton android:id="@+id/rbFish" android:text="Fish"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"/>
+                <RadioButton android:id="@+id/rbVegetable" android:text="Vegetable"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"/>
+                <RadioButton android:id="@+id/rbFoodMixed" android:text="Mixed"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"/>
+            </RadioGroup>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp"
+                android:background="#E5E5E5" android:layout_marginBottom="14dp"/>
+
+            <TextView android:text="Servings Per Day (Meal 1)"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgServings1"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp">
+                <RadioButton android:id="@+id/rbServings1Once" android:text="1x"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"/>
+                <RadioButton android:id="@+id/rbServings1Twice" android:text="2x"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"/>
+                <RadioButton android:id="@+id/rbServings1Thrice" android:text="3x"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"/>
+                <RadioButton android:id="@+id/rbServings1More" android:text="More than 3x"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"/>
+            </RadioGroup>
+
+            <TextView android:text="Secondary Food Choice"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgFoodChoice2"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp">
+                <RadioButton android:id="@+id/rbFood2Meat" android:text="Meat"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"/>
+                <RadioButton android:id="@+id/rbFood2Fish" android:text="Fish"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"/>
+                <RadioButton android:id="@+id/rbFood2Vegetable" android:text="Vegetable"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"/>
+                <RadioButton android:id="@+id/rbFood2Mixed" android:text="Mixed"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"/>
+            </RadioGroup>
+
+            <TextView android:text="Servings Per Day (Meal 2)"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgServings2"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp">
+                <RadioButton android:id="@+id/rbServings2Once" android:text="1x"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"/>
+                <RadioButton android:id="@+id/rbServings2Twice" android:text="2x"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"/>
+                <RadioButton android:id="@+id/rbServings2Thrice" android:text="3x"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"/>
+                <RadioButton android:id="@+id/rbServings2More" android:text="More than 3x"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"/>
+            </RadioGroup>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp"
+                android:background="#E5E5E5" android:layout_marginBottom="14dp"/>
+
+            <TextView android:text="Food Preparation Frequency"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgFoodPrepFreq"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp">
+                <RadioButton android:id="@+id/rbPrepFreqDaily" android:text="Daily"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"/>
+                <RadioButton android:id="@+id/rbPrepFreqAltDay" android:text="Every Other Day"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"/>
+                <RadioButton android:id="@+id/rbPrepFreqWeekly" android:text="Weekly"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"/>
+                <RadioButton android:id="@+id/rbPrepFreqRarely" android:text="Rarely"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"/>
+            </RadioGroup>
+
+            <TextView android:text="Food Preparation Method"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgFoodPreparation"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp">
+                <RadioButton android:id="@+id/rbPrepBoiled" android:text="Boiled"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"/>
+                <RadioButton android:id="@+id/rbPrepFried" android:text="Fried"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"/>
+                <RadioButton android:id="@+id/rbPrepGrilled" android:text="Grilled"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"/>
+                <RadioButton android:id="@+id/rbPrepRaw" android:text="Raw"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"/>
+                <RadioButton android:id="@+id/rbPrepMixed" android:text="Mixed"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"/>
+            </RadioGroup>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp"
+                android:background="#E5E5E5" android:layout_marginBottom="14dp"/>
+
+            <!-- Where Do They Buy Food -->
+            <TextView android:text="Where Do They Buy Food?"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="2dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:text="Select all that apply"
+                android:textSize="11sp" android:fontStyle="italic"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textLight"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbFoodRestaurant" android:text="Restaurant"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbFoodCarinderia" android:text="Carinderia"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbFoodCart" android:text="Food Cart"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbFoodBuyOthers" android:text="Others"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/etFoodBuyOthers"
+                android:hint="Specify other food source"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/sansserif"
+                android:padding="14dp" android:textSize="15sp"
+                android:layout_marginTop="8dp" android:layout_marginBottom="14dp"
+                android:layout_width="match_parent" android:layout_height="56dp"/>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp"
+                android:background="#E5E5E5" android:layout_marginBottom="14dp"/>
+
+            <!-- Why They Buy Outside -->
+            <TextView android:text="Why They Buy Outside"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="2dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:text="Select all that apply"
+                android:textSize="11sp" android:fontStyle="italic"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textLight"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbFoodConvenient" android:text="Convenient"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbFoodCheaper" android:text="Cheaper"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbFoodHealthy" android:text="Healthy"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <CheckBox android:id="@+id/cbFoodVariety" android:text="Variety"
+                android:fontFamily="@font/sansserif" android:textSize="14sp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp"
+                android:background="#E5E5E5" android:layout_marginTop="14dp"
+                android:layout_marginBottom="14dp"/>
+
+            <!-- Food Practices -->
+            <TextView android:text="Food Practices"
+                android:textSize="13sp" android:textStyle="bold"
+                android:fontFamily="@font/sansserif" android:textColor="@color/textMid"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+            <TextView android:text="Canned Food"
+                android:textSize="13sp" android:fontFamily="@font/sansserif"
+                android:textColor="@color/textMid"
+                android:layout_marginBottom="4dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgCannedFood"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp">
+                <RadioButton android:id="@+id/rbCannedYes" android:text="Yes"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:layout_marginEnd="16dp"/>
+                <RadioButton android:id="@+id/rbCannedNo" android:text="No"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"/>
+            </RadioGroup>
+
+            <TextView android:text="Grilled / Smoked Food"
+                android:textSize="13sp" android:fontFamily="@font/sansserif"
+                android:textColor="@color/textMid"
+                android:layout_marginBottom="4dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgGrilledFood"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp">
+                <RadioButton android:id="@+id/rbGrilledYes" android:text="Yes"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:layout_marginEnd="16dp"/>
+                <RadioButton android:id="@+id/rbGrilledNo" android:text="No"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"/>
+            </RadioGroup>
+
+            <TextView android:text="Carbonated Beverages"
+                android:textSize="13sp" android:fontFamily="@font/sansserif"
+                android:textColor="@color/textMid"
+                android:layout_marginBottom="4dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioGroup android:id="@+id/rgCarbonatedBeverages"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioButton android:id="@+id/rbCarbonatedYes" android:text="Yes"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"
+                    android:layout_marginEnd="16dp"/>
+                <RadioButton android:id="@+id/rbCarbonatedNo" android:text="No"
+                    android:fontFamily="@font/sansserif" android:textSize="14sp"/>
+            </RadioGroup>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

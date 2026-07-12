@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/cream">
+
+    <!-- ══════════════════════════════════════ -->
+    <!-- STICKY TOP HEADER                      -->
+    <!-- ══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_card"
+        android:elevation="6dp">
+
+        <!-- Top row: Back + Title + Icon -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="10dp">
+
+            <LinearLayout
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/back_button_bg"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="‹"
+                    android:textSize="26sp"
+                    android:textColor="@color/mottoBlue"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Individual Profile"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/mottoBlue"
+                    android:fontFamily="@font/sansserif"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Complete all sections before saving"
+                    android:textSize="11sp"
+                    android:textColor="@color/textMid"
+                    android:fontFamily="@font/sansserif"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_icon_circle"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🗂️"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 4-color brand accent bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:orientation="horizontal">
+            <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@color/mottoBlue"/>
+            <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@color/mottoGreen"/>
+            <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@color/mottoOrange"/>
+            <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@color/mottoRed"/>
+        </LinearLayout>
+
+        <!-- Section count strip -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="12dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sections"
+                android:textSize="11sp"
+                android:textColor="@color/textMid"
+                android:fontFamily="@font/sansserif"
+                android:layout_marginEnd="10dp"/>
+
+            <View android:layout_width="22dp" android:layout_height="6dp" android:background="@color/mottoBlue" android:layout_marginEnd="3dp"/>
+            <View android:layout_width="22dp" android:layout_height="6dp" android:background="@color/mottoGreen" android:layout_marginEnd="3dp"/>
+            <View android:layout_width="22dp" android:layout_height="6dp" android:background="@color/mottoOrange" android:layout_marginEnd="3dp"/>
+            <View android:layout_width="22dp" android:layout_height="6dp" android:background="@color/mottoRed" android:layout_marginEnd="3dp"/>
+            <View android:layout_width="22dp" android:layout_height="6dp" android:background="@color/mottoBlue" android:layout_marginEnd="3dp"/>
+            <View android:layout_width="22dp" android:layout_height="6dp" android:background="@color/mottoGreen" android:layout_marginEnd="3dp"/>
+            <View android:layout_width="22dp" android:layout_height="6dp" android:background="@color/mottoOrange" android:layout_marginEnd="3dp"/>
+            <View android:layout_width="22dp" android:layout_height="6dp" android:background="@color/mottoRed" android:layout_marginEnd="3dp"/>
+            <View android:layout_width="22dp" android:layout_height="6dp" android:background="@color/mottoBlue" android:layout_marginEnd="3dp"/>
+            <View android:layout_width="22dp" android:layout_height="6dp" android:background="@color/mottoGreen"/>
+
+            <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10 Sections"
+                android:textSize="11sp"
+                android:textColor="@color/mottoBlue"
+                android:textStyle="bold"
+                android:fontFamily="@font/sansserif"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ════════════════ -->
+    <!-- SCROLLABLE BODY -->
+    <!-- ════════════════ -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <!-- ══ SECTION 1 — PERSONAL INFORMATION (Blue) ══ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/rounded_card"
+                android:elevation="3dp"
+                android:layout_marginBottom="14dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:background="#1a4fa8">
+                    <TextView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:text="1"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#1a4fa8"
+                        android:gravity="center"
+                        android:background="@drawable/circle_bg"
+                        android:layout_marginEnd="10dp"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Personal Information"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/sansserif"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="👤" android:textSize="16sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Full Name" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoBlue" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                    <EditText android:id="@+id/etName" android:layout_width="match_parent" android:layout_height="50dp" android:hint="e.g. Juan Dela Cruz" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif" android:layout_marginBottom="12dp"/>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginEnd="8dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Age" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoBlue" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                            <EditText android:id="@+id/etAge" android:layout_width="match_parent" android:layout_height="50dp" android:hint="e.g. 25" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif" android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Birthday" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoBlue" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                            <EditText android:id="@+id/etBirthday" android:layout_width="match_parent" android:layout_height="50dp" android:hint="MM/DD/YYYY" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sex" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoBlue" android:fontFamily="@font/sansserif" android:layout_marginBottom="6dp"/>
+                    <RadioGroup android:id="@+id/rgGender" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                        <RadioButton android:id="@+id/rbMale" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Male" android:fontFamily="@font/sansserif" android:textColor="@color/textDark"/>
+                        <RadioButton android:id="@+id/rbFemale" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Female" android:fontFamily="@font/sansserif" android:textColor="@color/textDark" android:layout_marginStart="16dp"/>
+                    </RadioGroup>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Address" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoBlue" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                    <EditText android:id="@+id/etAddress" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Barangay, Municipality, Province" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif" android:layout_marginBottom="12dp"/>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Contact Number" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoBlue" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                    <EditText android:id="@+id/etContact" android:layout_width="match_parent" android:layout_height="50dp" android:hint="09XXXXXXXXX" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif" android:inputType="phone" android:layout_marginBottom="12dp"/>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Email Address" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoBlue" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                    <EditText android:id="@+id/etEmail" android:layout_width="match_parent" android:layout_height="50dp" android:hint="your@email.com" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif" android:inputType="textEmailAddress" android:layout_marginBottom="12dp"/>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PhilHealth Number" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoBlue" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                    <EditText android:id="@+id/etPhilhealth" android:layout_width="match_parent" android:layout_height="50dp" android:hint="XX-XXXXXXXXX-X" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif" android:layout_marginBottom="12dp"/>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Date of Registration" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoBlue" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                    <EditText android:id="@+id/etDateRegistration" android:layout_width="match_parent" android:layout_height="50dp" android:hint="MM/DD/YYYY" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif" android:layout_marginBottom="12dp"/>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Member Type" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoBlue" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                    <EditText android:id="@+id/etMemberType" android:layout_width="match_parent" android:layout_height="50dp" android:hint="e.g. Dependent / Member" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif" android:layout_marginBottom="12dp"/>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PhilHealth Konsulta Facility" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoBlue" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                    <EditText android:id="@+id/etFacility" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Facility Name" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif" android:layout_marginBottom="12dp"/>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Facility Address" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoBlue" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                    <EditText android:id="@+id/etFacilityAddress" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Address of Facility" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif" android:layout_marginBottom="12dp"/>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Patient / Guardian's Signature" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoBlue" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                    <EditText android:id="@+id/etSignature" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Signature over printed name" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ══ SECTION 2 — PERSONAL / SOCIAL HISTORY (Green) ══ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/rounded_card"
+                android:elevation="3dp"
+                android:layout_marginBottom="14dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:background="#2e7d32">
+                    <TextView android:layout_width="28dp" android:layout_height="28dp" android:text="2" android:textSize="13sp" android:textStyle="bold" android:textColor="#2e7d32" android:gravity="center" android:background="@drawable/circle_bg" android:layout_marginEnd="10dp"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Personal / Social History" android:textSize="14sp" android:textStyle="bold" android:textColor="#FFFFFF" android:fontFamily="@font/sansserif"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📜" android:textSize="16sp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+
+                    <!-- Smoking -->
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Smoking" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoGreen" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                    <RadioGroup android:id="@+id/rgSmoking" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="8dp">
+                        <RadioButton android:id="@+id/rbSmokingYes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Yes" android:fontFamily="@font/sansserif"/>
+                        <RadioButton android:id="@+id/rbSmokingNo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="No" android:fontFamily="@font/sansserif" android:layout_marginStart="16dp"/>
+                        <RadioButton android:id="@+id/rbSmokingQuit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Quit" android:fontFamily="@font/sansserif" android:layout_marginStart="16dp"/>
+                    </RadioGroup>
+                    <EditText android:id="@+id/etPackYear" android:layout_width="match_parent" android:layout_height="50dp" android:hint="No. of packs / year" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif" android:layout_marginBottom="14dp"/>
+
+                    <!-- Alcohol -->
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Alcohol" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoGreen" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                    <RadioGroup android:id="@+id/rgAlcohol" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="8dp">
+                        <RadioButton android:id="@+id/rbAlcoholYes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Yes" android:fontFamily="@font/sansserif"/>
+                        <RadioButton android:id="@+id/rbAlcoholNo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="No" android:fontFamily="@font/sansserif" android:layout_marginStart="16dp"/>
+                        <RadioButton android:id="@+id/rbAlcoholQuit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Quit" android:fontFamily="@font/sansserif" android:layout_marginStart="16dp"/>
+                    </RadioGroup>
+                    <EditText android:id="@+id/etBottleYear" android:layout_width="match_parent" android:layout_height="50dp" android:hint="No. of bottles / year" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif" android:layout_marginBottom="14dp"/>
+
+                    <!-- Illicit Drugs -->
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Illicit Drugs" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoGreen" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                    <RadioGroup android:id="@+id/rgDrugs" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="14dp">
+                        <RadioButton android:id="@+id/rbDrugsYes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Yes" android:fontFamily="@font/sansserif"/>
+                        <RadioButton android:id="@+id/rbDrugsNo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="No" android:fontFamily="@font/sansserif" android:layout_marginStart="16dp"/>
+                        <RadioButton android:id="@+id/rbDrugsQuit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Quit" android:fontFamily="@font/sansserif" android:layout_marginStart="16dp"/>
+                    </RadioGroup>
+
+                    <!-- Sexually Active -->
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sexually Active" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoGreen" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                    <RadioGroup android:id="@+id/rgSex" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <RadioButton android:id="@+id/rbSexYes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Yes" android:fontFamily="@font/sansserif"/>
+                        <RadioButton android:id="@+id/rbSexNo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="No" android:fontFamily="@font/sansserif" android:layout_marginStart="16dp"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ══ SECTION 3 — IMMUNIZATION (Orange) ══ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/rounded_card"
+                android:elevation="3dp"
+                android:layout_marginBottom="14dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:background="#e65100">
+                    <TextView android:layout_width="28dp" android:layout_height="28dp" android:text="3" android:textSize="13sp" android:textStyle="bold" android:textColor="#e65100" android:gravity="center" android:background="@drawable/circle_bg" android:layout_marginEnd="10dp"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Immunization" android:textSize="14sp" android:textStyle="bold" android:textColor="#FFFFFF" android:fontFamily="@font/sansserif"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="💉" android:textSize="16sp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="For Children" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoOrange" android:fontFamily="@font/sansserif" android:layout_marginBottom="8dp"/>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <CheckBox android:id="@+id/cbBCG" android:text="BCG" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/sansserif"/>
+                        <CheckBox android:id="@+id/cbOPV1" android:text="OPV1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/sansserif"/>
+                        <CheckBox android:id="@+id/cbOPV2" android:text="OPV2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/sansserif"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <CheckBox android:id="@+id/cbOPV3" android:text="OPV3" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/sansserif"/>
+                        <CheckBox android:id="@+id/cbDPT1" android:text="DPT1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/sansserif"/>
+                        <CheckBox android:id="@+id/cbDPT2" android:text="DPT2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/sansserif"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <CheckBox android:id="@+id/cbDPT3" android:text="DPT3" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/sansserif"/>
+                        <CheckBox android:id="@+id/cbMeasles" android:text="Measles" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/sansserif"/>
+                        <CheckBox android:id="@+id/cbHepa2" android:text="Hepa2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/sansserif"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="14dp">
+                        <CheckBox android:id="@+id/cbHepa3" android:text="Hepa3" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/sansserif"/>
+                        <CheckBox android:id="@+id/cbVaricella" android:text="Varicella" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/sansserif"/>
+                        <CheckBox android:id="@+id/cbNoneChild" android:text="None" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/sansserif"/>
+                    </LinearLayout>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="For Adult" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoOrange" android:fontFamily="@font/sansserif" android:layout_marginBottom="8dp"/>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="14dp">
+                        <CheckBox android:id="@+id/cbHPV" android:text="HPV" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/sansserif"/>
+                        <CheckBox android:id="@+id/cbMMR" android:text="MMR" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/sansserif"/>
+                        <CheckBox android:id="@+id/cbAdultNone" android:text="None" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/sansserif"/>
+                    </LinearLayout>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="For Elderly &amp; Immunocompromised" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoOrange" android:fontFamily="@font/sansserif" android:layout_marginBottom="8dp"/>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                        <CheckBox android:id="@+id/cbPneumococcal" android:text="Pneumococcal" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/sansserif"/>
+                        <CheckBox android:id="@+id/cbFlu" android:text="Flu Vaccine" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/sansserif"/>
+                    </LinearLayout>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Others" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoOrange" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                    <EditText android:id="@+id/etImmunizationOthers" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Specify other vaccines" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ══ SECTION 4 — FAMILY PLANNING (Red) ══ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/rounded_card"
+                android:elevation="3dp"
+                android:layout_marginBottom="14dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:background="#c62828">
+                    <TextView android:layout_width="28dp" android:layout_height="28dp" android:text="4" android:textSize="13sp" android:textStyle="bold" android:textColor="#c62828" android:gravity="center" android:background="@drawable/circle_bg" android:layout_marginEnd="10dp"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Family Planning" android:textSize="14sp" android:textStyle="bold" android:textColor="#FFFFFF" android:fontFamily="@font/sansserif"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="👨‍👩‍👧" android:textSize="16sp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                    <CheckBox android:id="@+id/cbFamilyPlanning" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="With access to family planning counselling" android:fontFamily="@font/sansserif" android:textColor="@color/textDark"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ══ SECTION 5 — PAST MEDICAL HISTORY (Blue) ══ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/rounded_card"
+                android:elevation="3dp"
+                android:layout_marginBottom="14dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:background="#1a4fa8">
+                    <TextView android:layout_width="28dp" android:layout_height="28dp" android:text="5" android:textSize="13sp" android:textStyle="bold" android:textColor="#1a4fa8" android:gravity="center" android:background="@drawable/circle_bg" android:layout_marginEnd="10dp"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Past Medical History" android:textSize="14sp" android:textStyle="bold" android:textColor="#FFFFFF" android:fontFamily="@font/sansserif"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🏥" android:textSize="16sp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+
+                    <CheckBox android:id="@+id/cbAllergy" android:text="Allergy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/sansserif"/>
+                    <EditText android:id="@+id/etAllergySpecify" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Specify Allergy" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif" android:layout_marginBottom="6dp"/>
+                    <CheckBox android:id="@+id/cbAsthma" android:text="Asthma" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/sansserif"/>
+                    <CheckBox android:id="@+id/cbCancer" android:text="Cancer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/sansserif"/>
+                    <EditText android:id="@+id/etCancerSpecify" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Specify Cancer" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif" android:layout_marginBottom="6dp"/>
+                    <CheckBox android:id="@+id/cbCerebrovascular" android:text="Cerebrovascular Disease" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/sansserif"/>
+                    <CheckBox android:id="@+id/cbCoronary" android:text="Coronary Artery Disease" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/sansserif"/>
+                    <CheckBox android:id="@+id/cbDiabetes" android:text="Diabetes Mellitus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/sansserif"/>
+                    <CheckBox android:id="@+id/cbEmphysema" android:text="Emphysema" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/sansserif"/>
+                    <CheckBox android:id="@+id/cbEpilepsy" android:text="Epilepsy / Seizure Disorder" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/sansserif"/>
+                    <CheckBox android:id="@+id/cbHepatitis" android:text="Hepatitis" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/sansserif"/>
+                    <EditText android:id="@+id/etHepatitisSpecify" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Specify Hepatitis" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif" android:layout_marginBottom="6dp"/>
+                    <CheckBox android:id="@+id/cbHyperlipidemia" android:text="Hyperlipidemia" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/sansserif"/>
+                    <CheckBox android:id="@+id/cbHypertension" android:text="Hypertension" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/sansserif"/>
+                    <EditText android:id="@+id/etHighestBP" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Highest BP (mmHg)" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif" android:layout_marginBottom="6dp"/>
+                    <CheckBox android:id="@+id/cbPeptic" android:text="Peptic Ulcer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/sansserif"/>
+                    <CheckBox android:id="@+id/cbPneumonia" android:text="Pneumonia" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/sansserif"/>
+                    <CheckBox android:id="@+id/cbThyroid" android:text="Thyroid Disease" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/sansserif"/>
+                    <CheckBox android:id="@+id/cbPTB" android:text="PTB" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/sansserif"/>
+                    <EditText android:id="@+id/etPTBSpecify" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Specify Extra PTB" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif" android:layout_marginBottom="6dp"/>
+                    <CheckBox android:id="@+id/cbUTI" android:text="Urinary Tract Infection" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/sansserif"/>
+                    <CheckBox android:id="@+id/cbMental" android:text="Mental Illness" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/sansserif"/>
+                    <EditText android:id="@+id/etPastOthers" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Others" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif" android:layout_marginBottom="6dp"/>
+                    <EditText android:id="@+id/etPastSurgicalHistory" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Past Surgical History Done" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif" android:layout_marginBottom="6dp"/>
+                    <EditText android:id="@+id/etDateDone" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Date Done" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ══ SECTION 6 — FAMILY HISTORY (Green) ══ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/rounded_card"
+                android:elevation="3dp"
+                android:layout_marginBottom="14dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:background="#2e7d32">
+                    <TextView android:layout_width="28dp" android:layout_height="28dp" android:text="6" android:textSize="13sp" android:textStyle="bold" android:textColor="#2e7d32" android:gravity="center" android:background="@drawable/circle_bg" android:layout_marginEnd="10dp"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Family History" android:textSize="14sp" android:textStyle="bold" android:textColor="#FFFFFF" android:fontFamily="@font/sansserif"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🧬" android:textSize="16sp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+
+                    <CheckBox android:id="@+id/cbFamAllergy" android:text="Allergy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/sansserif"/>
+                    <EditText android:id="@+id/etFamAllergySpecify" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Specify Allergy" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif" android:layout_marginBottom="6dp"/>
+                    <CheckBox android:id="@+id/cbFamAsthma" android:text="Asthma" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/sansserif"/>
+                    <CheckBox android:id="@+id/cbFamCancer" android:text="Cancer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/sansserif"/>
+                    <EditText android:id="@+id/etFamCancerSpecify" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Specify Cancer" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif" android:layout_marginBottom="6dp"/>
+                    <CheckBox android:id="@+id/cbFamCerebrovascular" android:text="Cerebrovascular Disease" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/sansserif"/>
+                    <CheckBox android:id="@+id/cbFamCoronary" android:text="Coronary Artery Disease" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/sansserif"/>
+                    <CheckBox android:id="@+id/cbFamDiabetes" android:text="Diabetes Mellitus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/sansserif"/>
+                    <CheckBox android:id="@+id/cbFamEmphysema" android:text="Emphysema" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/sansserif"/>
+                    <CheckBox android:id="@+id/cbFamEpilepsy" android:text="Epilepsy / Seizure Disorder" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/sansserif"/>
+                    <CheckBox android:id="@+id/cbFamHepatitis" android:text="Hepatitis" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/sansserif"/>
+                    <EditText android:id="@+id/etFamHepatitisSpecify" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Specify Hepatitis" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif" android:layout_marginBottom="6dp"/>
+                    <CheckBox android:id="@+id/cbFamHyperlipidemia" android:text="Hyperlipidemia" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/sansserif"/>
+                    <CheckBox android:id="@+id/cbFamHypertension" android:text="Hypertension" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/sansserif"/>
+                    <EditText android:id="@+id/etFamHighestBP" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Highest BP (mmHg)" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif" android:layout_marginBottom="6dp"/>
+                    <CheckBox android:id="@+id/cbFamPeptic" android:text="Peptic Ulcer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/sansserif"/>
+                    <CheckBox android:id="@+id/cbFamPneumonia" android:text="Pneumonia" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/sansserif"/>
+                    <CheckBox android:id="@+id/cbFamThyroid" android:text="Thyroid Disease" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/sansserif"/>
+                    <CheckBox android:id="@+id/cbFamPTB" android:text="PTB" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/sansserif"/>
+                    <EditText android:id="@+id/etFamPTBSpecify" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Specify Extra PTB" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif" android:layout_marginBottom="6dp"/>
+                    <CheckBox android:id="@+id/cbFamUTI" android:text="Urinary Tract Infection" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/sansserif"/>
+                    <CheckBox android:id="@+id/cbFamMental" android:text="Mental Illness" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/sansserif"/>
+                    <EditText android:id="@+id/etFamilyOthers" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Others" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif" android:layout_marginBottom="6dp"/>
+                    <EditText android:id="@+id/etFamPastSurgicalHistory" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Past Surgical History Done" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif" android:layout_marginBottom="6dp"/>
+                    <EditText android:id="@+id/etFamDateDone" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Date Done" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ══ SECTION 7 — MENSTRUAL HISTORY (Orange) ══ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/rounded_card"
+                android:elevation="3dp"
+                android:layout_marginBottom="14dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:background="#e65100">
+                    <TextView android:layout_width="28dp" android:layout_height="28dp" android:text="7" android:textSize="13sp" android:textStyle="bold" android:textColor="#e65100" android:gravity="center" android:background="@drawable/circle_bg" android:layout_marginEnd="10dp"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Menstrual History" android:textSize="14sp" android:textStyle="bold" android:textColor="#FFFFFF" android:fontFamily="@font/sansserif"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📅" android:textSize="16sp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Menarche (yrs old)" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoOrange" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                    <EditText android:id="@+id/etMenarche" android:layout_width="match_parent" android:layout_height="50dp" android:hint="e.g. 13" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif" android:layout_marginBottom="12dp"/>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Onset of Sexual Intercourse (yrs old)" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoOrange" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                    <EditText android:id="@+id/etSexualIntercourse" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Age" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif" android:layout_marginBottom="12dp"/>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Last Menstrual Period" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoOrange" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                    <EditText android:id="@+id/etLastMenstrual" android:layout_width="match_parent" android:layout_height="50dp" android:hint="MM/DD/YYYY" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif" android:layout_marginBottom="12dp"/>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginEnd="8dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Period Duration" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoOrange" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                            <EditText android:id="@+id/etPeriodDuration" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Days" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="No. of pads / day" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoOrange" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                            <EditText android:id="@+id/etPads" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Count" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif" android:inputType="number"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Interval Cycle (days)" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoOrange" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                    <EditText android:id="@+id/etCycle" android:layout_width="match_parent" android:layout_height="50dp" android:hint="e.g. 28" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif" android:inputType="number" android:layout_marginBottom="12dp"/>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Birth Control Method Used" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoOrange" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                    <EditText android:id="@+id/etBirthControl" android:layout_width="match_parent" android:layout_height="50dp" android:hint="e.g. Pills, IUD, Condom" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif" android:layout_marginBottom="12dp"/>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Menopause" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoOrange" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                    <RadioGroup android:id="@+id/rgMenopause" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <RadioButton android:id="@+id/rbMenopauseYes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Yes" android:fontFamily="@font/sansserif"/>
+                        <RadioButton android:id="@+id/rbMenopauseNo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="No" android:fontFamily="@font/sansserif" android:layout_marginStart="16dp"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ══ SECTION 8 — PREGNANCY HISTORY (Red) ══ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/rounded_card"
+                android:elevation="3dp"
+                android:layout_marginBottom="14dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:background="#c62828">
+                    <TextView android:layout_width="28dp" android:layout_height="28dp" android:text="8" android:textSize="13sp" android:textStyle="bold" android:textColor="#c62828" android:gravity="center" android:background="@drawable/circle_bg" android:layout_marginEnd="10dp"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Pregnancy History" android:textSize="14sp" android:textStyle="bold" android:textColor="#FFFFFF" android:fontFamily="@font/sansserif"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🤰" android:textSize="16sp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="G  P  T  P  A  L" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoRed" android:fontFamily="@font/sansserif" android:layout_marginBottom="6dp"/>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                        <EditText android:id="@+id/etGravida" android:layout_width="0dp" android:layout_height="50dp" android:layout_weight="1" android:hint="G" android:background="@drawable/rounded_edittext" android:padding="8dp" android:gravity="center" android:fontFamily="@font/sansserif" android:inputType="number" android:layout_marginEnd="4dp"/>
+                        <EditText android:id="@+id/etPara" android:layout_width="0dp" android:layout_height="50dp" android:layout_weight="1" android:hint="P" android:background="@drawable/rounded_edittext" android:padding="8dp" android:gravity="center" android:fontFamily="@font/sansserif" android:inputType="number" android:layout_marginEnd="4dp"/>
+                        <EditText android:id="@+id/etTerm" android:layout_width="0dp" android:layout_height="50dp" android:layout_weight="1" android:hint="T" android:background="@drawable/rounded_edittext" android:padding="8dp" android:gravity="center" android:fontFamily="@font/sansserif" android:inputType="number" android:layout_marginEnd="4dp"/>
+                        <EditText android:id="@+id/etPreterm" android:layout_width="0dp" android:layout_height="50dp" android:layout_weight="1" android:hint="P" android:background="@drawable/rounded_edittext" android:padding="8dp" android:gravity="center" android:fontFamily="@font/sansserif" android:inputType="number" android:layout_marginEnd="4dp"/>
+                        <EditText android:id="@+id/etAbortion" android:layout_width="0dp" android:layout_height="50dp" android:layout_weight="1" android:hint="A" android:background="@drawable/rounded_edittext" android:padding="8dp" android:gravity="center" android:fontFamily="@font/sansserif" android:inputType="number" android:layout_marginEnd="4dp"/>
+                        <EditText android:id="@+id/etLiving" android:layout_width="0dp" android:layout_height="50dp" android:layout_weight="1" android:hint="L" android:background="@drawable/rounded_edittext" android:padding="8dp" android:gravity="center" android:fontFamily="@font/sansserif" android:inputType="number"/>
+                    </LinearLayout>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Type of Delivery" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoRed" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                    <EditText android:id="@+id/etTypeOfDelivery" android:layout_width="match_parent" android:layout_height="50dp" android:hint="e.g. NSD, CS" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif" android:layout_marginBottom="12dp"/>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pregnancy Induced Hypertension" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoRed" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                    <EditText android:id="@+id/etPregnancyHypertension" android:layout_width="match_parent" android:layout_height="50dp" android:hint="Specify if applicable" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ══ SECTION 9 — PHYSICAL EXAMINATION (Blue) ══ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/rounded_card"
+                android:elevation="3dp"
+                android:layout_marginBottom="14dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:background="#1a4fa8">
+                    <TextView android:layout_width="28dp" android:layout_height="28dp" android:text="9" android:textSize="13sp" android:textStyle="bold" android:textColor="#1a4fa8" android:gravity="center" android:background="@drawable/circle_bg" android:layout_marginEnd="10dp"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Pertinent Physical Examination" android:textSize="14sp" android:textStyle="bold" android:textColor="#FFFFFF" android:fontFamily="@font/sansserif"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🩻" android:textSize="16sp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginEnd="8dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Height" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoBlue" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                            <EditText android:id="@+id/etHeight" android:layout_width="match_parent" android:layout_height="50dp" android:hint="cm" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Weight" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoBlue" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                            <EditText android:id="@+id/etWeight" android:layout_width="match_parent" android:layout_height="50dp" android:hint="kg" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginEnd="8dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Temperature" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoBlue" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                            <EditText android:id="@+id/etTemp" android:layout_width="match_parent" android:layout_height="50dp" android:hint="°C" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Blood Pressure" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoBlue" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                            <EditText android:id="@+id/etBP" android:layout_width="match_parent" android:layout_height="50dp" android:hint="mmHg" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginEnd="8dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Heart Rate" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoBlue" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                            <EditText android:id="@+id/etHR" android:layout_width="match_parent" android:layout_height="50dp" android:hint="bpm" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Respiratory Rate" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoBlue" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                            <EditText android:id="@+id/etRR" android:layout_width="match_parent" android:layout_height="50dp" android:hint="breaths/min" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Visual Acuity" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoBlue" android:fontFamily="@font/sansserif" android:layout_marginBottom="6dp"/>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginEnd="8dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Right Eye" android:textSize="11sp" android:textColor="@color/textMid" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                            <EditText android:id="@+id/etVisualAcuityRight" android:layout_width="match_parent" android:layout_height="50dp" android:hint="e.g. 20/20" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Left Eye" android:textSize="11sp" android:textColor="@color/textMid" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                            <EditText android:id="@+id/etVisualAcuityLeft" android:layout_width="match_parent" android:layout_height="50dp" android:hint="e.g. 20/20" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Blood Type" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoBlue" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                    <EditText android:id="@+id/etBloodType" android:layout_width="match_parent" android:layout_height="50dp" android:hint="e.g. A+, O-, AB+" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ══ SECTION 10 — PEDIA CLIENT (Green) ══ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/rounded_card"
+                android:elevation="3dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:background="#2e7d32">
+                    <TextView android:layout_width="28dp" android:layout_height="28dp" android:text="10" android:textSize="11sp" android:textStyle="bold" android:textColor="#2e7d32" android:gravity="center" android:background="@drawable/circle_bg" android:layout_marginEnd="10dp"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Pedia Client (0–24 months)" android:textSize="14sp" android:textStyle="bold" android:textColor="#FFFFFF" android:fontFamily="@font/sansserif"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="👶" android:textSize="16sp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginEnd="8dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Body Length" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoGreen" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                            <EditText android:id="@+id/etBodyLength" android:layout_width="match_parent" android:layout_height="50dp" android:hint="cm" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Head Circumference" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoGreen" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                            <EditText android:id="@+id/etHeadCircumference" android:layout_width="match_parent" android:layout_height="50dp" android:hint="cm" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Chest Circumference" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoGreen" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                    <EditText android:id="@+id/etChestCircumference" android:layout_width="match_parent" android:layout_height="50dp" android:hint="cm" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif" android:layout_marginBottom="12dp"/>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginEnd="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Abdomen" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoGreen" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                            <EditText android:id="@+id/etAbdomen" android:layout_width="match_parent" android:layout_height="50dp" android:hint="cm" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginEnd="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hip" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoGreen" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                            <EditText android:id="@+id/etHip" android:layout_width="match_parent" android:layout_height="50dp" android:hint="cm" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Limbs" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoGreen" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                            <EditText android:id="@+id/etLimbs" android:layout_width="match_parent" android:layout_height="50dp" android:hint="cm" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mid Upper Arm Circumference (MUAC)" android:textSize="12sp" android:textStyle="bold" android:textColor="@color/mottoGreen" android:fontFamily="@font/sansserif" android:layout_marginBottom="4dp"/>
+                    <EditText android:id="@+id/etMUAC" android:layout_width="match_parent" android:layout_height="50dp" android:hint="cm" android:background="@drawable/rounded_edittext" android:padding="14dp" android:fontFamily="@font/sansserif"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ══ SAVE BUTTON ══ -->
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/mottoBlue"
+                android:text="💾  Save Profile"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/sansserif"
+                android:stateListAnimator="@null"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
